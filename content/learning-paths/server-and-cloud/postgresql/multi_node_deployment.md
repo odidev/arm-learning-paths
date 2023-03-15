@@ -366,8 +366,12 @@ sudo systemctl stop postgresql
 2. Next, remove all files in the replica’s data directory in order to start on a clean state and make room for the primary node data directory using below command.
 
 ```console
-sudo rm -rf /var/lib/postgresql/9.6/main/*
+sudo -u postgres bash -c 'rm -rf /var/lib/postgresql/9.6/main/*'
 ```
+
+{{% notice Note %}}
+Please verify whether files are removed properly or not.
+{{% /notice %}}
 
 3. Now run the pg_basebackup utility to copy data from the primary node to the replica node using below command.
 
