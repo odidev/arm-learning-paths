@@ -109,7 +109,7 @@ resource "aws_security_group" "Terraformsecurity" {
  }
 resource "local_file" "inventory" {
     depends_on=[aws_instance.MYSQL_TEST]
-    filename = "/home/ubuntu/inventory.txt"
+    filename = "/tmp/inventory"
     content = <<EOF
 [all]
 ansible-target1 ansible_connection=ssh ansible_host=${aws_instance.MYSQL_TEST.public_ip} ansible_user=ubuntu
@@ -239,7 +239,7 @@ In our case, the inventory file will generate automatically after the `terraform
 ### Ansible Commands
 To run a Playbook, we need to use the `ansible-playbook` command.
 ```console
-ansible-playbook {your_yml_file} -i {your_inventory_file}
+ansible-playbook {your_yml_file} -i /tmp/inventory
 ```
 Answer `yes` when prompted for the SSH connection.
 
