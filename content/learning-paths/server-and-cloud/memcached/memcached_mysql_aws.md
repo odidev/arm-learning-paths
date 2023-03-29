@@ -65,7 +65,7 @@ provider "aws" {
   tags = {
     Name = "MYSQL_TEST"
   }
-
+}
 resource "aws_default_vpc" "main" {
   tags = {
     Name = "main"
