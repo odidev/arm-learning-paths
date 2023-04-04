@@ -32,7 +32,7 @@ The instructions to login to Google Cloud CLI and to create the keys are below.
 
 ### Acquire user credentials
 
-To obtain user access credentials, follow the [steps from the Terraform Learning Path](/learning-paths/server-and-cloud/gcp/terraform#acquire-user-credentials).
+To obtain user credentials, follow this [documentation](/install-guides/gcp_login).
 
 ### Generate an SSH key-pair
 

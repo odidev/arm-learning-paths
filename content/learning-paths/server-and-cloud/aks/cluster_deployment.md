@@ -24,7 +24,7 @@ Three tools are required on the computer you are using. Follow the links to inst
 
 ## Azure authentication
 
-For Azure authentication, follow this [documentation](/learning-paths/server-and-cloud/azure/terraform#azure-authentication).
+For Azure authentication, follow this [documentation](/install-guides/azure_login).
 
 ## Create an SSH key pair
 

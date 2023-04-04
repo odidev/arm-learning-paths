@@ -38,11 +38,11 @@ Generate the SSH key-pair (public key, private key) using `ssh-keygen` to use fo
 If you already have an SSH key-pair present in the `~/.ssh` directory, you can skip this step.
 {{% /notice %}}
 
-### Generate AWS access keys
+### Generate and configure Access keys (Access key ID and Secret access key)
 
 Terraform requires AWS authentication to create AWS resources. You can generate access keys (access key ID and secret access key) to perform authentication. Terraform uses the access keys to make calls to AWS using the AWS CLI.
 
-To generate an access key and secret access key, follow the [steps from the Terraform Learning Path](/learning-paths/server-and-cloud/aws-terraform/terraform#generate-access-keys-access-key-id-and-secret-access-key).
+To generate and configure the Access key ID and Secret access key, follow this [documentation](/install-guides/aws_access_keys).
 
 ## Create an AWS EC2 instance using Terraform
 
@@ -51,8 +51,6 @@ Using a text editor, save the code below in a file called `main.tf`:
 ```console
 provider "aws" {
   region = "us-east-2"
-  access_key  = "AXXXXXXXXXXXXXXXXXXX"
-  secret_key   = "AAXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 }
 resource "aws_instance" "redis-deployment" {
   ami = "ami-0ca2eafa23bc3dd01"

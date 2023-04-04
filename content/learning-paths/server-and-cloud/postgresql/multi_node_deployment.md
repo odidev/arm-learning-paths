@@ -35,8 +35,6 @@ There are three required modifications to `main.tf`. Each change is marked with 
 // instance creation
 provider "aws" {
   region = "us-east-1"
-  access_key  = "AXXXXXXXXXXXXXXXXXXXX"
-  secret_key  = "AXXXXXXXXXXXXXXXXXXXX"
 }
 // 3 node change: add the count line to specify 3 instances
 resource "aws_instance" "PSQL_TEST" {

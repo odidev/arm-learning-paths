@@ -23,7 +23,7 @@ If you already have an SSH key-pair present in the `~/.ssh` directory, you can s
 
 ### Acquire user credentials
 
-To acquire user credentials follow this [documentation](/learning-paths/server-and-cloud/gcp/terraform#acquire-user-credentials).
+To obtain user credentials, follow this [documentation](/install-guides/gcp_login).
 
 ### Deploying Arm instances on GCP and providing access via Jump Server
 For deploying Arm instances on GCP and providing access via Jump Server, the Terraform configuration is broken into 4 files: **main.tf**, **outputs.tf**, **variables.tf**, **terraform.tfvars**, and a modules directory that contains **vpc-network** and **network-firewall** directories.

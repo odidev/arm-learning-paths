@@ -27,8 +27,6 @@ Scroll down to see the information you need to change in `main.tf`.
 ```console
 provider "aws" {
   region = "us-east-2"
-  access_key  = "AXXXXXXXXXXXXXXXXXXX"
-  secret_key   = "AXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 }
 resource "aws_instance" "redis-deployment" {
   ami = "ami-0ca2eafa23bc3dd01"

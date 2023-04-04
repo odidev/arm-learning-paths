@@ -40,7 +40,7 @@ If you already have an SSH key-pair present in the `~/.ssh` directory, you can s
 
 ### Acquire user credentials
 
-To obtain user access credentials, follow the [steps from the Terraform Learning Path](/learning-paths/server-and-cloud/gcp/terraform#acquire-user-credentials).
+To obtain user credentials, follow this [documentation](/install-guides/gcp_login).
 
 ## Create a GCP instance using Terraform
 

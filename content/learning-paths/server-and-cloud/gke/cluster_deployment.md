@@ -48,38 +48,7 @@ Three tools are required on the computer you are using. Follow the links to inst
 
 ### Acquire user credentials
 
-1. Initialize the gcloud CLI using `gcloud init`: 
-
-```console
-gcloud init
-```
-This will add the SDK to your PATH and grant the SDK permission to access GCP using your user account credentials. This step requires you to log in and then select the project you want to work in.
-
-A URL is printed to use for the next step.
-
-![image](https://user-images.githubusercontent.com/92863151/215751413-4d5b1fad-65c7-454c-98dc-abdeb8790fb5.png)
-
-2. Open the URL in a browser and copy the authorization code.
-
-![image](https://user-images.githubusercontent.com/92863151/215687299-0216b802-f64d-4d60-97fa-b6f6b495bcdd.png)
-
-3. Paste the authorization code back on the command line and then select your new project. 
-
-You can also configure a default compute region and zone but you can skip this by selecting "n". Terraform will be used to configure the compute details. 
-
-![215687984-6d7a597a-4724-41e6-8ade-2852f864515f](https://user-images.githubusercontent.com/92863151/215691694-70536dce-2db6-4042-a9a0-ec4e1900ecc8.png)
-
-4. Run the `gcloud auth` command to add your GCP account to the Application Default Credentials (ADC).
-
-```console
-gcloud auth application-default login
-```
-
-5. Open the printed URL in the browser and copy the authorization code from the browser back to the gcloud CLI.
-
-![image](https://user-images.githubusercontent.com/92863151/215689339-f8a9ae9f-7894-44b5-a02e-284b049de476.png)
-
-This enables the Google client libraries to use your account for for billing and quotas. This also allows Terraform to access the credentials to provision resources.
+To obtain user credentials, follow this [documentation](/install-guides/gcp_login).
 
 ### Enable APIs
 
