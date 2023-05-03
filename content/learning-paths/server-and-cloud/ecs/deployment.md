@@ -29,3 +29,12 @@ From the IAM dashboard select `Users` from the left menu and click on `Add user`
 On the `Add user` screen enter a username and click on `next`
 
 ![image](https://user-images.githubusercontent.com/87687468/235643519-a0463ba5-d347-4e3d-905e-0f8790008954.png)
+
+### Attaching the ECS access policy
+ECS requires permissions for many services such as listing roles and creating clusters in addition to permissions that are explicitly ECS. The best way to add all of these permissions to our new IAM user is to use an Amazon managed policy to grant access to the new user.
+Select `Attach existing policies directly` under Set permissions and search for `AmazonECS_FullAccess`. Select checkbox next to the policy.
+
+![image](https://user-images.githubusercontent.com/87687468/235838644-9e96ae76-6f10-4164-818a-aa9f40fd36ef.png)
+
+
+
