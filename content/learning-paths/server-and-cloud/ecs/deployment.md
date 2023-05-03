@@ -79,6 +79,13 @@ Go back to the ECS page, select Task Definitions and we should see our new task 
 
 Now select the task in the Task definition list and click `Deploy` and select `Run Task`
 
+![image](https://user-images.githubusercontent.com/87687468/235880090-aad4cd44-51fd-4e2d-aaf4-d4450db656e5.png)
+
+Now select your cluster from drop down menu of Existing cluster. Select a vpc from the list. If you are building a custom app this should be the vpc assigned to any other AWS services you will need to access from your instance. For our app, any will do. Add at least one subnet. Auto-assign public IP should be set to ENBABLED and click on `create`.
+
+![1](https://user-images.githubusercontent.com/87687468/235882089-9d7064d5-d2e2-44f6-99fa-1a94947ca246.JPG)
+![image](https://user-images.githubusercontent.com/87687468/235881999-c9e34017-1b72-4d81-adf1-f57edd57e434.png)
+
 
 
 
