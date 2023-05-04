@@ -99,9 +99,16 @@ Click on the link in the Task column and find the Public IP address in the `Conf
 
 ![image](https://user-images.githubusercontent.com/87687468/236181529-38d2bb22-59d6-4cd5-a7bc-123fcbe39917.png)
 
-
 Enter the public IP address followed by :Port(In our case :80) in your browser to see your app in action.
 
+![image](https://user-images.githubusercontent.com/87687468/236188907-5953f69d-98c2-4def-b5b2-b6b71186af19.png)
 
+## Shut down the app
+When you are done, you’ll want to shut down your app to avoid charges. From the ECS page select Clusters from the left menu, and select your cluster from the list of clusters.
 
+![image](https://user-images.githubusercontent.com/87687468/236189556-7516dd61-f9fd-4807-96c3-a9a47d08c9b2.png)
+
+From the table at the bottom of the page select `tasks`. Check the box next to the running task and select `stop` from the dropdown menu at the top of the table
+
+![image](https://user-images.githubusercontent.com/87687468/236190146-48ec2000-50dc-4772-b4c4-f440577b50b4.png)
 
