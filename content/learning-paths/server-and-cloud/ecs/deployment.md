@@ -88,7 +88,19 @@ security groupAuto-assign public IP should be set to ENBABLED and click on `crea
 ![1](https://user-images.githubusercontent.com/87687468/235882089-9d7064d5-d2e2-44f6-99fa-1a94947ca246.JPG)
 ![image](https://user-images.githubusercontent.com/87687468/236178142-dd2d264d-4f5f-44aa-90c9-87f9601acac4.png)
 
+And finally, run the task by clicking `Create` in the lower Right corner of the page.
 
+## Check to see if our app is running
+After you run the Task, you will be forwarded to the fargate-cluster page. When the Last Status for your cluster changes to RUNNING, your app is up and running. You may have to refresh the table a couple of times before the status is RUNNING. This can take a few minutes.
+
+![image](https://user-images.githubusercontent.com/87687468/236180290-963d6e6b-a67c-4a74-a102-20f8faa871f5.png)
+
+Click on the link in the Task column and find the Public IP address in the `Configuration` section of the Task page.
+
+![image](https://user-images.githubusercontent.com/87687468/236181529-38d2bb22-59d6-4cd5-a7bc-123fcbe39917.png)
+
+
+Enter the public IP address followed by :Port(In our case :80) in your browser to see your app in action.
 
 
 
