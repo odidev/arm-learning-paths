@@ -81,10 +81,14 @@ Now select the task in the Task definition list and click `Deploy` and select `R
 
 ![image](https://user-images.githubusercontent.com/87687468/235880090-aad4cd44-51fd-4e2d-aaf4-d4450db656e5.png)
 
-Now select your cluster from drop down menu of `Existing cluster`. Select a vpc from the list. If you are building a custom app this should be the vpc assigned to any other AWS services you will need to access from your instance. For our app, any will do. Add at least one subnet and select the security group. security groupAuto-assign public IP should be set to ENBABLED and click on `create`.
+Now select your cluster from drop down menu of `Existing cluster`. In **Networking** section, select a vpc from the list. If you are building a custom app this should be the vpc assigned to any other AWS services you will need to access from your instance. For our app, any will do. Add at least one subnet.
+Edit the security group. Because `Nginx` runs on port 80 by default, and we opened port 80 on our container, we also need to open port 90 in the security group. Click on `Edit` next to the security group name and add a Custom TCP rule that opens port 80.
+security groupAuto-assign public IP should be set to ENBABLED and click on `create`.
 
 ![1](https://user-images.githubusercontent.com/87687468/235882089-9d7064d5-d2e2-44f6-99fa-1a94947ca246.JPG)
-![image](https://user-images.githubusercontent.com/87687468/235881999-c9e34017-1b72-4d81-adf1-f57edd57e434.png)
+![image](https://user-images.githubusercontent.com/87687468/236178142-dd2d264d-4f5f-44aa-90c9-87f9601acac4.png)
+
+
 
 
 
