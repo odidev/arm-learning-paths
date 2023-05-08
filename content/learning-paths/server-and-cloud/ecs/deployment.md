@@ -78,11 +78,41 @@ Select `Create Repository` in the lower right of the page and your repository wi
 
 ![image](https://user-images.githubusercontent.com/87687468/236802115-216ecf39-0a2b-47b5-be78-030f0ee23c68.png)
 
+## Create the Docker image
+For the purpose of this demo we are going to use a simple Nginx app. we can either pull the image from Dockerhub or build the same from source files. Since the image is available on Dockerhub, we can directly pull the same using below command. 
 
+```console
+docker pull nginx
+```
+Now In order for ECR to know which repository we are pushing our image to we must tag the image with that URI.
+```console
+docker tag nginx [use your uri here]
+```
+The full command for our ECR registry will look like:
+```console
+docker tag myapp 173141235168.dkr.ecr.us-east-2.amazonaws.com/myapp
+```
+## Give the Docker CLI permission to access your Amazon account
+Use below command to to configure AWS CLI
+```console
+aws configure
+```
+It will ask us for our credentials which we have saved while creating the AIM user. Use those credentials to authenticate.
+Next, we need to generate a ECR login token for docker. This step is best combined with the following step but its good to take a deeper look to see what is going on. When you run the followign command it spits out an ugly token. Docker needs that token to push to your repository.
+```console
+aws ecr get-login-password --region us-east-2
+```
+We can pipe that token straight into Docker like this. Make sure to replace [your account number] with your account number. The ARN at the end is the same as the one we used earlier without the name of the repository at the end.
+```console
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
+```
+If all goes well the response will be Login Succeeded.
 
-
-
-
+## Upload your docker image to ECR
+Use below command to push the image to the ECR repository.
+```console
+docker push [your account number].dkr.ecr.us-east-1.amazonaws.com/myapp
+```
 
 ## Create a Fargate Cluster
 Search for `Elastic Container Service` and select Elastic Container Service. From the left menu select `Clusters` and then select `Create cluster`.
