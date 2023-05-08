@@ -26,9 +26,9 @@ From the IAM dashboard select `Users` from the left menu and click on `Add user`
 
 ![user](https://user-images.githubusercontent.com/87687468/235642557-f2db9563-7c4f-4882-a40a-d81a3c84b9d3.png)
 
-On the `Add user` screen enter a username and click on `next`
+On the `Add user` screen enter a username and select the check box befor `Provide user access to the AWS Management Console`. Then select `I want to create an IAM user` and click on `next`
 
-![image](https://user-images.githubusercontent.com/87687468/235643519-a0463ba5-d347-4e3d-905e-0f8790008954.png)
+![image](https://user-images.githubusercontent.com/87687468/236792673-6e6f4690-f06e-45b3-b87d-243872ddc3a6.png)
 
 ### Attaching the ECS access policy
 ECS requires permissions for many services such as listing roles and creating clusters in addition to permissions that are explicitly ECS. The best way to add all of these permissions to our new IAM user is to use an Amazon managed policy to grant access to the new user.
@@ -40,7 +40,49 @@ Select `Next` to review our work and create the user.
 
 ![image](https://user-images.githubusercontent.com/87687468/235839326-cba80b0d-50e0-48b3-8584-1593240d4792.png)
 
-A new user will get created on **IAM>>User** page.
+When you submit this page you will get a confirmation screen. Save all of the information there in safe place we will need all of it when we deploy our container.
+A new user will get created on **IAM>>User** page. Click on the user and goto `Security credentials` section. Click on `create access key`
+
+![image](https://user-images.githubusercontent.com/87687468/236796346-390f5193-b5cf-4132-a18d-37ea23eba5a9.png)
+![image](https://user-images.githubusercontent.com/87687468/236796580-521971ca-d3ad-4ce6-a5c4-47aa59d62427.png)
+
+Select `Command Line Interface (CLI)` and click on `Next`
+
+![image](https://user-images.githubusercontent.com/87687468/236796940-8a5dcb6a-2008-49c2-a117-72379df22f9d.png)
+
+Add description and crate access key.
+
+![image](https://user-images.githubusercontent.com/87687468/236797205-a6a795af-6988-41ed-96da-e2da63bd0a4a.png)
+
+Save `Access key` and `Secret access key` somewhere safe, we will need the same while configuring AWS CLI. 
+
+## Create an ECR registry
+In this step we are going to create the repository in ECR to store our image. We will need the ARN (Amazon Resource Name — a unique identifier for all AWS resources) of this repository to properly tag and upload our image.
+First login to the AWS console with the `test_user` credentials we created earlier. Amazon will ask for your account id, username, and password.
+
+![image](https://user-images.githubusercontent.com/87687468/236799998-55f90ae7-cb65-49c8-8185-17b66ee70257.png)
+
+It will ask to change your default password, change the same as per your choice.
+
+![image](https://user-images.githubusercontent.com/87687468/236800802-72fbc1ad-63c4-480f-9392-d27ab2721d26.png)
+
+Once you are in, search for Elastic Container Registry and select it.
+
+![image](https://user-images.githubusercontent.com/87687468/236801302-7ea5a6ff-09ff-4a35-81d6-576880e240bd.png)
+
+From there fill in the name of the repository as myapp and leave everything else default.
+
+![image](https://user-images.githubusercontent.com/87687468/236801796-a6558808-f20a-4422-8ce5-d4b5544d58f2.png)
+
+Select `Create Repository` in the lower right of the page and your repository will be created. You will see your repository in the repository list, and most importantly the ARN(here called a URI) which we will need to push up our image. Copy the URI for the next step.
+
+![image](https://user-images.githubusercontent.com/87687468/236802115-216ecf39-0a2b-47b5-be78-030f0ee23c68.png)
+
+
+
+
+
+
 
 ## Create a Fargate Cluster
 Search for `Elastic Container Service` and select Elastic Container Service. From the left menu select `Clusters` and then select `Create cluster`.
