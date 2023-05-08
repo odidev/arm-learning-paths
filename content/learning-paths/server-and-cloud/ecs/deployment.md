@@ -1,6 +1,6 @@
 ---
 # User change
-title: "deploy ECS containers on AWS Graviton processor"
+title: "Deploy ECS containers on AWS Graviton processor"
 
 weight: 2 # 1 is first, 2 is second, etc.
 
