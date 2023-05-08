@@ -106,7 +106,7 @@ We can pipe that token straight into Docker like this. Make sure to replace [you
 ```console
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
 ```
-If all goes well the response will be Login Succeeded.
+If all goes well, the response will be Login Succeeded.
 
 ## Upload your docker image to ECR
 Use below command to push the image to the ECR repository.
