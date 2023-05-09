@@ -11,8 +11,6 @@ layout: "learningpathall"
 ## Prerequisites
 
 * An AWS account
-* A computer with Node installed
-* A computer with Docker installed
 
 ## Deploy ECS containers on AWS Graviton processor
 Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications.
