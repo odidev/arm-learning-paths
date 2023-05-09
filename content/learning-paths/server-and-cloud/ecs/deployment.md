@@ -30,17 +30,19 @@ On the `Add user` screen enter a username and select the check box before `Provi
 
 ## Create an ECR policy
 We will need to have access to ECR to store our images but there is no Amazon managed policy option. We must create a new policy to attach to our IAM user.
-To do so, select `Create policy`. Under Service select `Elastic Container Registry`. Now select `All Elastic Container Registry actions (ecr:*)` under `Actions allowed`. 
+To do so, select `Create policy`.
+
+![permission](https://user-images.githubusercontent.com/87687468/237015604-85e79e95-20c8-42b4-a489-f8453693c6ce.png)
+
+Under `Service`, select `Elastic Container Registry`. Now select `All Elastic Container Registry actions (ecr:*)` under `Actions allowed`. 
 
 ![policy](https://user-images.githubusercontent.com/87687468/237007344-ef0af46f-d96c-49ed-96e2-9cae5415cc95.png)
 
-Under `Resources` select `specific` and `Add ARN`. Here we will select the `region` and select `Any` for Repository name under `This account` and click on `Add ARNs`.
+Under `Resources`, select `specific` and `Add ARN`. Here we will select the `region` and select `Any` for Repository name under `This account` and click on `Add ARNs`.
 
 ![image](https://user-images.githubusercontent.com/87687468/237008844-0f3268be-3941-4e74-9c39-9ed521ee43ac.png)
 
 Skip the tags by clicking `Next`. Fill in an appropriate policy name. We will use `ECR_FullAccess` and select `Create policy`.
-
-
 
 ## Attaching the access policy
 ECS requires permissions for many services such as listing roles and creating clusters in addition to permissions that are explicitly ECS. The best way to add all of these permissions to our new IAM user is to use an Amazon managed policy to grant access to the new user.
