@@ -148,9 +148,9 @@ The ECS Task is the action that takes our image and deploys it to a container. T
 
 ![image](https://user-images.githubusercontent.com/87687468/235845002-667547ac-5cb4-4dfb-b81c-0c379bd45745.png)
 
-Now, Enter the name of the `Task definition family` in  `Task definition configuration`. Also Enter the name of your first container and name of Docker image which you want to use. Here we are using `nginx` docker image to Deploy docker container. Leave everything as it is and click on `Next`.
+Now, Enter the name of the `Task definition family` in  `Task definition configuration`. Also Enter the name of your container and ARN of our image in the Image box. You can copy this from the ECR dashboard if you haven’t already. Leave everything as it is and click on `Next`.
 
-![image](https://user-images.githubusercontent.com/87687468/235846324-c9d15fec-ba3b-47b9-8f3c-5b72761c1903.png)
+![image](https://user-images.githubusercontent.com/87687468/237050951-2a4f3195-24ce-4503-beca-6ce424626b2b.png)
 
 **NOTE:** Here we are not mapping any other port as Nginx runs on port 80 by default.
 
