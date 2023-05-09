@@ -51,8 +51,6 @@ Select `Attach existing policies directly` under `Set permissions` and search fo
 
 ![image](https://user-images.githubusercontent.com/87687468/237011455-837bf0ac-aa4f-402e-badf-e01dd6ec2236.png)
 
-![image](https://user-images.githubusercontent.com/87687468/235838644-9e96ae76-6f10-4164-818a-aa9f40fd36ef.png)
-
 Select `Next` to review our work and create the user.
 
 ![image](https://user-images.githubusercontent.com/87687468/235839326-cba80b0d-50e0-48b3-8584-1593240d4792.png)
