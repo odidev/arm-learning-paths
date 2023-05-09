@@ -53,7 +53,7 @@ Select `Attach existing policies directly` under `Set permissions` and search fo
 
 Select `Next` to review our work and create the user.
 
-![image](https://user-images.githubusercontent.com/87687468/235839326-cba80b0d-50e0-48b3-8584-1593240d4792.png)
+![image](https://user-images.githubusercontent.com/87687468/237018931-b11edaa3-a78e-40e1-9680-b87cdca27a3e.png)
 
 When you submit this page you will get a confirmation screen. Save all of the information there in safe place we will need all of it when we deploy our container.
 A new user will get created on **IAM>>User** page. Click on the user and goto `Security credentials` section. Click on `create access key`
