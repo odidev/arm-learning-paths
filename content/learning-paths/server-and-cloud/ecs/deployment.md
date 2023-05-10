@@ -49,7 +49,7 @@ ECS requires permissions for many services such as listing roles and creating cl
 
 Select `Attach existing policies directly` under `Set permissions` and search for `AmazonECS_FullAccess` & `ECR_FullAccess`. Select checkbox next to the policies.
 
-![image](https://user-images.githubusercontent.com/87687468/237011455-837bf0ac-aa4f-402e-badf-e01dd6ec2236.png)
+![permission1](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/fb69eced-d5be-413f-b550-bef713cad2cc)
 
 Select `Next` to review our work and create the user.
 
@@ -65,7 +65,7 @@ Select `Command Line Interface (CLI)` and click on `Next`
 
 ![image](https://user-images.githubusercontent.com/87687468/236796940-8a5dcb6a-2008-49c2-a117-72379df22f9d.png)
 
-Add description and crate access key.
+Add description and create access key.
 
 ![image](https://user-images.githubusercontent.com/87687468/236797205-a6a795af-6988-41ed-96da-e2da63bd0a4a.png)
 
@@ -94,7 +94,7 @@ Select `Create Repository` in the lower right of the page and your repository wi
 ![image](https://user-images.githubusercontent.com/87687468/236802115-216ecf39-0a2b-47b5-be78-030f0ee23c68.png)
 
 ## Create the Docker image
-For the purpose of this demo we are going to use a simple Nginx app. we can either pull the image from Dockerhub or build the same from source files. Since the image is available on Dockerhub, we can directly pull the same using below command. 
+For the purpose of this demo we are going to use a simple Nginx app. we can either pull the image from Dockerhub or build the same from source files. Since the image is available on Dockerhub, we can directly pull the same on Linux/Arm64 paltform using below command. 
 
 ```console
 docker pull nginx
@@ -105,21 +105,21 @@ docker tag nginx [use your uri here]
 ```
 The full command for our ECR registry will look like:
 ```console
-docker tag myapp 173141235168.dkr.ecr.us-east-2.amazonaws.com/myapp
+docker tag nginx 173141235168.dkr.ecr.us-east-2.amazonaws.com/myapp
 ```
 ## Give the Docker CLI permission to access your Amazon account
 Use below command to to configure AWS CLI
 ```console
 aws configure
 ```
-It will ask us for our credentials which we have saved while creating the AIM user. Use those credentials to authenticate.
-Next, we need to generate a ECR login token for docker. This step is best combined with the following step but its good to take a deeper look to see what is going on. When you run the followign command it spits out an ugly token. Docker needs that token to push to your repository.
+It will ask us for our credentials which we have saved while creating the IAM user. Use those credentials to authenticate.
+Next, we need to generate a ECR login token for docker. This step is best combined with the following step but its good to take a deeper look to see what is going on. When you run the followign command it generated a token. Docker needs that token to push to your repository.
 ```console
 aws ecr get-login-password --region us-east-2
 ```
 We can pipe that token straight into Docker like this. Make sure to replace [your account number] with your account number. The ARN at the end is the same as the one we used earlier without the name of the repository at the end.
 ```console
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
 ```
 If all goes well, the response will be Login Succeeded.
 
@@ -130,11 +130,11 @@ docker push [your account number].dkr.ecr.us-east-1.amazonaws.com/myapp
 ```
 
 ## Create a Fargate Cluster
-Search for `Elastic Container Service` and select Elastic Container Service. From the left menu select `Clusters` and then select `Create cluster`.
+Search for `Elastic Container Service` and select `Elastic Container Service`. From the left menu select `Clusters` and then select `Create cluster`.
 
 ![image](https://user-images.githubusercontent.com/87687468/235840042-e7461d64-1c1f-4a61-b930-fb1c24d36281.png)
 
-Name the cluster and the rest we can leave as is. Select `Create`.
+Name the cluster and the rest we can leave as it is. Select `Create`.
 
 ![image](https://user-images.githubusercontent.com/87687468/235840668-d13d607d-b546-4d5f-bf95-00b0f57e8322.png)
 
@@ -143,7 +143,7 @@ A cluster will be created as below.
 ![image](https://user-images.githubusercontent.com/87687468/235840972-51355567-ac19-476d-b969-7c010cb41688.png)
 
 ## Create an ECS Task
-The ECS Task is the action that takes our image and deploys it to a container. To create an ECS Task lets go back to the ECS page and do the following:
+The ECS Task is the action that takes our image and deploys it to a container. To create an ECS Task do the following:
 * Select `Task Definitions` from the left menu. Then select `Create new Task Definition`.
 
 ![image](https://user-images.githubusercontent.com/87687468/235845002-667547ac-5cb4-4dfb-b81c-0c379bd45745.png)
@@ -160,7 +160,7 @@ Under Environment Section, select `Operating system/Architecture` as  `Linux/ARM
 
 Review everything and click on `create`. 
 
-Go back to the ECS page, select Task Definitions and we should see our new task with a status of ACTIVE.
+Go to the ECS page, select Task Definitions and we should see our new task with a status of ACTIVE.
 
 ![image](https://user-images.githubusercontent.com/87687468/235849100-2865c98a-77fd-45f9-8d49-5c9acac0f5e9.png)
 
@@ -169,7 +169,7 @@ Now select the task in the Task definition list and click `Deploy` and select `R
 ![image](https://user-images.githubusercontent.com/87687468/235880090-aad4cd44-51fd-4e2d-aaf4-d4450db656e5.png)
 
 Now select your cluster from drop down menu of `Existing cluster`. In **Networking** section, select a vpc from the list. If you are building a custom app this should be the vpc assigned to any other AWS services you will need to access from your instance. For our app, any will do. Add at least one subnet.
-Edit the security group. Because `Nginx` runs on port 80 by default, and we opened port 80 on our container, we also need to open port 90 in the security group. Click on `Edit` next to the security group name and add a Custom TCP rule that opens port 80.
+Edit the security group. Because `Nginx` runs on port 80 by default, and we opened port 80 on our container, we also need to open port 80 in the security group. Click on `Edit` next to the security group name and add a Custom TCP rule that opens port 80.
 security groupAuto-assign public IP should be set to ENBABLED and click on `create`.
 
 ![1](https://user-images.githubusercontent.com/87687468/235882089-9d7064d5-d2e2-44f6-99fa-1a94947ca246.JPG)
