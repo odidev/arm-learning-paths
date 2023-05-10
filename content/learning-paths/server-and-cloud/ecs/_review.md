@@ -28,7 +28,7 @@ review:
             - "False"
         correct_answer: 2
         explanation: >
-            No. Docker is the only container platform supported by Amazon ECS at this time.
+            No, docker is the only container platform supported by Amazon ECS at this time.
 
     - questions:
         question: >
@@ -38,7 +38,7 @@ review:
             - "False"
         correct_answer: 1
         explanation: >
-            Yes. It is possible to associate a service on Amazon ECS to an Application Load Balancer (ALB) for the ELB service.
+            Yes, it is possible to associate a service on Amazon ECS to an Application Load Balancer (ALB) for the ELB service.
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
