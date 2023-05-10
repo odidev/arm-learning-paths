@@ -1,5 +1,5 @@
 ---
-title: "deploy ECS containers on AWS Graviton processor"
+title: "Deploy ECS containers on AWS Graviton processor"
 
 minutes_to_complete: 60
 
@@ -13,9 +13,7 @@ learning_objectives:
 
 prerequisites:
     - An AWS account
-    - A computer with Node installed
     - A computer with Docker installed
-    - A computer with Terraform installed
 
 author_primary: Jason Andrews
 
