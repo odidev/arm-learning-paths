@@ -36,7 +36,7 @@ On the `Add user` screen enter a username and select the check box before `Provi
 
 ## Create an ECR policy
 
-We will need to have access to ECR to store our images but there is no Amazon managed policy option. We must create a new policy to attach to our IAM user.
+We will need to have access to ECR to store our images but there is no Amazon-managed policy option. We must create a new policy to attach to our IAM user.
 To do so, select `Create policy`.
 
 ![permission](https://user-images.githubusercontent.com/87687468/237015604-85e79e95-20c8-42b4-a489-f8453693c6ce.png)
@@ -64,7 +64,7 @@ Select `Next` to review our work and create the user.
 ![image](https://user-images.githubusercontent.com/87687468/237018931-b11edaa3-a78e-40e1-9680-b87cdca27a3e.png)
 
 When you submit this page you will get a confirmation screen. Save all of the information there in safe place we will need all of it when we deploy our container.
-A new user will get created on **IAM>>User** page. Click on the user and goto `Security credentials` section. Click on `create access key`
+A new user will get created on **IAM>>User** page. Click on the user and go to `Security credentials` section. Click on `create access key`
 
 ![image](https://user-images.githubusercontent.com/87687468/236796346-390f5193-b5cf-4132-a18d-37ea23eba5a9.png)
 ![image](https://user-images.githubusercontent.com/87687468/236796580-521971ca-d3ad-4ce6-a5c4-47aa59d62427.png)
@@ -104,39 +104,51 @@ Select `Create Repository` in the lower right of the page and your repository wi
 
 ## Create the Docker image
 
-For the purpose of this demo we are going to use a simple Nginx app. we can either pull the image from Dockerhub or build the same from source files. Since the image is available on Dockerhub, we can directly pull the same on Linux/Arm64 paltform using below command. 
+For the purpose of this demo we are going to use a simple Nginx app. We can either pull the image from Dockerhub or build the same from source files. Since the image is available on Dockerhub, we can directly pull the same on Linux/Arm64 platform using the below command. 
 
 ```console
 docker pull nginx
 ```
-Now In order for ECR to know which repository we are pushing our image to we must tag the image with that URI.
+
+Now in order for ECR to know which repository we are pushing our image to we must tag the image with that URI.
+
 ```console
 docker tag nginx [use your uri here]
 ```
+
 The full command for our ECR registry will look like:
+
 ```console
 docker tag nginx 173141235168.dkr.ecr.us-east-2.amazonaws.com/myapp
 ```
-## Give the Docker CLI permission to access your Amazon account
 
-Use below command to to configure AWS CLI
+## Give the Docker CLI permission to access of your Amazon account
+
+Use below command to configure AWS CLI
+
 ```console
 aws configure
 ```
-It will ask us for our credentials which we have saved while creating the IAM user. Use those credentials to authenticate.
-Next, we need to generate a ECR login token for docker. This step is best combined with the following step but its good to take a deeper look to see what is going on. When you run the followign command it generated a token. Docker needs that token to push to your repository.
+
+It will ask us for the credentials which we have saved while creating the IAM user. Use those credentials to authenticate.
+Next, we need to generate a ECR login token for docker. This step is best combined with the following step but its good to take a deeper look to see what is going on. When you run the following command it generated a token. Docker needs that token to push to your repository.
+
 ```console
 aws ecr get-login-password --region us-east-2
 ```
+
 We can pipe that token straight into Docker like this. Make sure to replace [your account number] with your account number. The ARN at the end is the same as the one we used earlier without the name of the repository at the end.
+
 ```console
 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
 ```
+
 If all goes well, the response will be Login Succeeded.
 
 ## Upload your docker image to ECR
 
 Use below command to push the image to the ECR repository.
+
 ```console
 docker push [your account number].dkr.ecr.us-east-1.amazonaws.com/myapp
 ```
@@ -158,21 +170,23 @@ A cluster will be created as below.
 ## Create an ECS Task
 
 The ECS Task is the action that takes our image and deploys it to a container. To create an ECS Task do the following:
+
 * Select `Task Definitions` from the left menu. Then select `Create new Task Definition`.
 
 ![image](https://user-images.githubusercontent.com/87687468/235845002-667547ac-5cb4-4dfb-b81c-0c379bd45745.png)
 
-Now, Enter the name of the `Task definition family` in  `Task definition configuration`. Also Enter the name of your container and ARN of our image in the Image box. You can copy this from the ECR dashboard if you haven’t already. Leave everything as it is and click on `Next`.
+* Enter the name of the `Task definition family` in  `Task definition configuration`. 
+* Enter the name of your container and ARN of our image in the Image box. You can copy this from the ECR dashboard if you haven’t already. Leave everything as it is and click on `Next`.
 
 ![image](https://user-images.githubusercontent.com/87687468/237050951-2a4f3195-24ce-4503-beca-6ce424626b2b.png)
 
 **NOTE:** Here we are not mapping any other port as Nginx runs on port 80 by default.
 
-Under Environment Section, select `Operating system/Architecture` as  `Linux/ARM64` and leave everything else set to its default value and click `Next` in the lower Right corner of the dialog.
+* Under Environment Section, select `Operating system/Architecture` as  `Linux/ARM64` and leave everything else set to its default value and click `Next` in the lower Right corner of the dialog.
 
 ![image](https://user-images.githubusercontent.com/87687468/235848013-599bfcbe-27a1-4a47-a7ab-2914081b9b2d.png)
 
-Review everything and click on `create`. 
+* Review everything and click on `create`. 
 
 Go to the ECS page, select Task Definitions and we should see our new task with a status of ACTIVE.
 
@@ -183,7 +197,7 @@ Now select the task in the Task definition list and click `Deploy` and select `R
 ![image](https://user-images.githubusercontent.com/87687468/235880090-aad4cd44-51fd-4e2d-aaf4-d4450db656e5.png)
 
 Now select your cluster from drop down menu of `Existing cluster`. In Networking section, select a vpc from the list. If you are building a custom app this should be the vpc assigned to any other AWS services you will need to access from your instance. For our app, any will do. Add at least one subnet.
-Edit the security group. Because `Nginx` runs on port 80 by default, and we opened port 80 on our container, we also need to open port 80 in the security group. Select `Create a new security group` and enter the Security group name and security group desciption and add a Custom TCP inbound rule that opens port 80.
+Edit the security group. Because `Nginx` runs on port 80 by default, and we opened port 80 on our container, we also need to open port 80 in the security group. Select `Create a new security group` and enter the Security group name and security group description and add a Custom TCP inbound rule that opens port 80.
 Auto-assign public IP should be set to ENBABLED and click on `create`.
 
 ![1](https://user-images.githubusercontent.com/87687468/235882089-9d7064d5-d2e2-44f6-99fa-1a94947ca246.JPG)
@@ -193,7 +207,7 @@ And finally, run the task by clicking `Create` in the lower Right corner of the 
 
 ## Check to see if our app is running
 
-After you run the Task, you will be forwarded to the fargate-cluster page. When the Last Status for your cluster changes to RUNNING, your app is up and running. You may have to refresh the table a couple of times before the status is RUNNING. This can take a few minutes.
+After you run the Task, you will be forwarded to the Fargate-cluster page. When the Last Status for your cluster changes to RUNNING, your app is up and running. You may have to refresh the table a couple of times before the status is RUNNING. This can take a few minutes.
 
 ![image](https://user-images.githubusercontent.com/87687468/236180290-963d6e6b-a67c-4a74-a102-20f8faa871f5.png)
 
@@ -207,7 +221,7 @@ Enter the public IP address followed by :Port(In our case :80) in your browser t
 
 ## Shut down the app
 
-When you are done, you’ll want to shut down your app to avoid charges. From the ECS page select Clusters from the left menu, and select your cluster from the list of clusters.
+When you are done, you’ll want to shut down your app to avoid charges. From the ECS page select Clusters from the left menu and select your cluster from the list of clusters.
 
 ![image](https://user-images.githubusercontent.com/87687468/236189556-7516dd61-f9fd-4807-96c3-a9a47d08c9b2.png)
 
