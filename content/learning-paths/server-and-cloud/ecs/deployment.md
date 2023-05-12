@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ## Deploy ECS containers on AWS Graviton processor
 
-Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications. Here we will learn to deploy a simple app to ECS and run it on a Fargate Cluster so you don’t have to worry about provisioning or maintaining EC2 instances.  we’ll also take a look at the necessary IAM user and IAM role permissions and how to set them up.
+Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications. Here we will learn to deploy a simple app to ECS and run it on a Fargate Cluster so you don’t have to worry about provisioning or maintaining EC2 instances.  We’ll also take a look at the necessary IAM user and IAM role permissions and how to set them up.
 
 ## Before you begin
 
