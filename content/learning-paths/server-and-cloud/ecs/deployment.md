@@ -8,6 +8,10 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
+## Deploy ECS containers on AWS Graviton processor
+
+Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications. Here we will learn to deploy a simple app to ECS and run it on a Fargate Cluster so you don’t have to worry about provisioning or maintaining EC2 instances.  we’ll also take a look at the necessary IAM user and IAM role permissions and how to set them up.
+
 ## Before you begin
 
 You should have the prerequisite tools installed before starting the Learning Path. 
@@ -15,10 +19,6 @@ You should have the prerequisite tools installed before starting the Learning Pa
 Any computer which has the required tools installed can be used for this section. The computer can be your desktop or laptop computer or a virtual machine with the required tools. 
 
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
-
-## Deploy ECS containers on AWS Graviton processor
-
-Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications.
 
 ## Create an IAM User and assign permissions
 
@@ -34,7 +34,7 @@ On the `Add user` screen enter a username and select the check box before `Provi
 
 ![image](https://user-images.githubusercontent.com/87687468/236792673-6e6f4690-f06e-45b3-b87d-243872ddc3a6.png)
 
-## Create an ECR policy
+### Create an ECR policy
 
 We will need to have access to ECR to store our images but there is no Amazon-managed policy option. We must create a new policy to attach to our IAM user.
 To do so, select `Create policy`.
@@ -51,7 +51,7 @@ Under `Resources`, select `specific` and `Add ARN`. Here we will select the `reg
 
 Skip the tags by clicking `Next`. Fill in an appropriate policy name. We will use `ECR_FullAccess` and select `Create policy`.
 
-## Attaching the access policy
+### Attaching the access policy
 
 ECS requires permissions for many services such as listing roles and creating clusters in addition to permissions that are explicitly ECS. The best way to add all of these permissions to our new IAM user is to use an Amazon managed policy to grant access to the new user.
 
