@@ -7,9 +7,7 @@ who_is_this_for: This is an introductory topic for anyone new to using AWS ECS.
 
 learning_objectives:
     - Create an AWS ECS cluster
-    - Create an AWS ECS task
-    - Create an AWS ECS service
-    - Create a load balancer
+    - Create and run an AWS ECS task
 
 prerequisites:
     - An AWS account
