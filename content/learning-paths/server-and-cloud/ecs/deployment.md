@@ -84,11 +84,11 @@ Save `Access key` and `Secret access key` somewhere safe, we will need the same 
 In this step we are going to create the repository in ECR to store our image. We will need the ARN (Amazon Resource Name — a unique identifier for all AWS resources) of this repository to properly tag and upload our image.
 First login to the AWS console with the `test_user` credentials we created earlier. Amazon will ask for your `account id`, `username`, and `password`.
 
-![image](https://user-images.githubusercontent.com/87687468/236799998-55f90ae7-cb65-49c8-8185-17b66ee70257.png)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/15119efa-95ec-4dcc-b886-f9152f0f7bc8)
 
 It will ask to change your default password, change the same as per your choice.
 
-![image](https://user-images.githubusercontent.com/87687468/236800802-72fbc1ad-63c4-480f-9392-d27ab2721d26.png)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/f741024d-1dd2-4a4a-88ed-e340eff26726)
 
 Once you are in, search for Elastic Container Registry and select it.
 
@@ -96,11 +96,11 @@ Once you are in, search for Elastic Container Registry and select it.
 
 From there fill in the name of the repository as myapp and leave everything else default.
 
-![image](https://user-images.githubusercontent.com/87687468/236801796-a6558808-f20a-4422-8ce5-d4b5544d58f2.png)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/727d18c4-fe52-4211-abc0-7a0f0d9ea123)
 
 Select `Create Repository` in the lower right of the page and your repository will be created. You will see your repository in the repository list, and most importantly the ARN(here called a URI) which we will need to push up our image. Copy the URI for the next step.
 
-![image](https://user-images.githubusercontent.com/87687468/236802115-216ecf39-0a2b-47b5-be78-030f0ee23c68.png)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/aa09712b-9950-49f3-8280-8109aee81135)
 
 ## Create the Docker image
 
@@ -119,7 +119,7 @@ docker tag nginx [use your uri here]
 The full command for our ECR registry will look like:
 
 ```console
-docker tag nginx 173141235168.dkr.ecr.us-east-2.amazonaws.com/myapp
+docker tag nginx XXXXXXXXXXXX.dkr.ecr.us-east-2.amazonaws.com/myapp
 ```
 
 ## Give the Docker CLI permission to access of your Amazon account
@@ -178,7 +178,7 @@ The ECS Task is the action that takes our image and deploys it to a container. T
 * Enter the name of the `Task definition family` in  `Task definition configuration`. 
 * Enter the name of your container and ARN of our image in the Image box. You can copy this from the ECR dashboard if you haven’t already. Leave everything as it is and click on `Next`.
 
-![image](https://user-images.githubusercontent.com/87687468/237050951-2a4f3195-24ce-4503-beca-6ce424626b2b.png)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/9f057197-22c6-41b3-86f3-813f2a5a9aaf)
 
 {{% notice Note %}} Here we are not mapping any other port as Nginx runs on port 80 by default.{{% /notice %}} 
 
