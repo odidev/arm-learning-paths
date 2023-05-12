@@ -150,7 +150,7 @@ If all goes well, the response will be Login Succeeded.
 Use below command to push the image to the ECR repository.
 
 ```console
-docker push [your account number].dkr.ecr.us-east-1.amazonaws.com/myapp
+docker push [your account number].dkr.ecr.us-east-2.amazonaws.com/myapp
 ```
 
 ## Create a Fargate Cluster
