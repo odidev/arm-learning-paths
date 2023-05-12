@@ -113,14 +113,12 @@ docker pull nginx
 Now in order for ECR to know which repository we are pushing our image to we must tag the image with that URI.
 
 ```console
-docker tag nginx [use your uri here]
+docker tag nginx [uri]
 ```
 
+{{% notice Note %}} Replace `[uri]` with your respective URI {{% /notice %}}
 The full command for our ECR registry will look like:
 
-```console
-docker tag nginx XXXXXXXXXXXX.dkr.ecr.us-east-2.amazonaws.com/myapp
-```
 
 ## Give the Docker CLI permission to access of your Amazon account
 
