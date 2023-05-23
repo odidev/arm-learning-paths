@@ -195,12 +195,12 @@ resource "aws_default_vpc" "default_vpc" {
 # Provide references to your default subnets
 resource "aws_default_subnet" "default_subnet_a" {
   # Use your own region here but reference to subnet 1a
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-2a"
 }
 
 resource "aws_default_subnet" "default_subnet_b" {
   # Use your own region here but reference to subnet 1b
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-2b"
 }
 ```
 
@@ -282,7 +282,7 @@ resource "aws_ecs_service" "app_service" {
   load_balancer {
     target_group_arn = "${aws_lb_target_group.target_group.arn}" # Reference the target group
     container_name   = "${aws_ecs_task_definition.app_task.family}"
-    container_port   = 5000 # Specify the container port
+    container_port   = 80 # Specify the container port
   }
 
   network_configuration {
