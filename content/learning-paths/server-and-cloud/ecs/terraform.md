@@ -70,7 +70,7 @@ To provision the displayed configuration infrastructure on AWS, apply the above 
 ```console
 terraform apply
 ```
-enter yes when prompted to allow Terraform to execute this command as expected.
+Enter yes when prompted to allow Terraform to execute this command as expected.
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/3728a859-cc9c-419a-b0d9-3e707e6e986c)
 
