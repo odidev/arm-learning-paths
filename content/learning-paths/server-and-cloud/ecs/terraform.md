@@ -81,5 +81,5 @@ Terraform will create the ECR. You can confirm this on your Amazon Elastic Conta
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/208951cd-140c-4a4b-9ea1-70ca1c14b332)
 
-
+Now that you have an ECR repository ready, it’s time to create the docker image and upload it to ECR
 
