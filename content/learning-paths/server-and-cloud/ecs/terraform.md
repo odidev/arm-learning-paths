@@ -81,5 +81,107 @@ Terraform will create the ECR. You can confirm this on your Amazon Elastic Conta
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/208951cd-140c-4a4b-9ea1-70ca1c14b332)
 
-Now that you have an ECR repository ready, it’s time to create the docker image and upload it to ECR
+Now that you have an ECR repository ready, it’s time to create the Docker image and upload it to ECR. Follow below steps to do so:
+* [Create the Docker image](/learning-paths/server-and-cloud/ecs/deployment.md#Create the Docker image)
+* [Give the Docker CLI permission to access of your Amazon account](/learning-paths/server-and-cloud/ecs/deployment.md#Give the Docker CLI permission to access of your Amazon account)
+* [Upload your docker image to ECR](/learning-paths/server-and-cloud/ecs/deployment.md#Upload your docker image to ECR)
+
+Finally, refresh the repository’s page to verify you’ve successfully pushed the image to the AWS ECR repository.
+
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/499f6e80-7ba7-4143-9263-d4142dcf9261)
+
+## Creat an ECS Cluster
+
+So far, you’ve created a repository and deployed the image. But whenever you want to launch, you’ll need a target. A cluster acts as the container target. It takes a task into the cluster configuration and runs that task within the cluster.
+To create a cluster where you’ll run your task, add the following configurations to your main.tf file:
+
+```console
+# main.tf
+resource "aws_ecs_cluster" "my_cluster" {
+  name = "app-cluster" # Name your cluster here
+}
+```
+This will instruct ECS to create a new cluster named app-cluster. Re-run the apply command to add these changes to AWS:
+
+```console
+terraform apply
+```
+Head over to Amazon ECS Clusters, and verify that you can see these changes:
+
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/136f3ec4-b7ca-4f73-a988-7d35e2a23b18)
+
+## Configure AWS ECS Task Definition
+
+The image is now hosted in the ECR, but to run the image, you need to launch it onto an ECS container.
+To deploy the image to ECS, you first need to create a task. A task tells ECS how you want to spin up your Docker container. A task is a true blueprint for your application. It describes the container’s critical specifications of how to launch your application container. These specifications include:
+
+* Port mappings
+* Application image
+* CPU and RAM resources
+* Container launch types such as EC2 or Fargate
+
+An AWS ECS workload has two main launch types: EC2 and Fargate.
+Fargate is an AWS orchestration tool. It allows you to give AWS the role of managing your container lifecycle and the hosting infrastructure. Fargate runs your container as serverless, which means you don’t need to provision your container using EC2 instances. Instead of using the ECS clusters to run your container, you can use Fargate to spin up and run your container on ECS without provisioning a virtual machine on AWS.
+Add below configuration in your `main.tf`:
+
+```console
+# main.tf
+resource "aws_ecs_task_definition" "app_task" {
+  family                   = "app-first-task" # Name your task
+  container_definitions    = <<DEFINITION
+  [
+    {
+      "name": "app-first-task",
+      "image": "${aws_ecr_repository.app_ecr_repo.repository_url}",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "memory": 512,
+      "cpu": 256
+    }
+  ]
+  DEFINITION
+  requires_compatibilities = ["FARGATE"] # use Fargate as the launch type
+  network_mode             = "awsvpc"    # add the AWS VPN network mode as this is required for Fargate
+  memory                   = 512         # Specify the memory the container requires
+  cpu                      = 256         # Specify the CPU the container requires
+  execution_role_arn       = "${aws_iam_role.ecsTaskExecutionRole.arn}"
+}
+```
+{{% notice Note %}} Change `containerPort`, `hostPort`, `memory` & `cpu` as per your requirment.{{% notice Note %}}
+
+As described in the above config block, Terraform will create a task named app-first-task and also assign the resources needed to power up the container through this task. This process includes assigning the deployed image, container ports, launch type, and the hardware requirements that the container needs to run.
+Creating a task definition requires ecsTaskExecutionRole to be added to your IAM. The above task definition needs this role, and it is specified as aws_iam_role.ecsTaskExecutionRole.arn. In the next step, create a resource to execute this role as follows:
+
+```console
+# main.tf
+resource "aws_iam_role" "ecsTaskExecutionRole" {
+  name               = "ecsTaskExecutionRole"
+  assume_role_policy = "${data.aws_iam_policy_document.assume_role_policy.json}"
+}
+
+data "aws_iam_policy_document" "assume_role_policy" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type        = "Service"
+      identifiers = ["ecs-tasks.amazonaws.com"]
+    }
+  }
+}
+
+resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
+  role       = "${aws_iam_role.ecsTaskExecutionRole.name}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+```
+Run terraform apply to add these changes to AWS. Navigate to Amazon ECS Task Definitions, and these changes should reflect as such:
+
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/f39983c4-233f-4eb5-af48-7884aaaa881c)
+
 
