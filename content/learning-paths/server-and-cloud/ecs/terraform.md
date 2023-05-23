@@ -20,7 +20,7 @@ Any computer which has the required tools installed can be used for this section
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
 
 ## Create an IAM User and assign permissions
-To provision the infrastructure running on AWS ECS, you need an Identity and Access Management (IAM) user account. IAM enables you to manage access to AWS resources securely. You can manage who is authenticated (signed in) and permitted (has permissions) to use resources using IAM. To create an IAm user and assign permission follow [this](/learning-paths/server-and-cloud/ecs/deployment.md#create-an-iam-user-and-assign-permissions)
+To provision the infrastructure running on AWS ECS, you need an Identity and Access Management (IAM) user account. IAM enables you to manage access to AWS resources securely. You can manage who is authenticated (signed in) and permitted (has permissions) to use resources using IAM. To create an IAM user and assign permission follow [this](/learning-paths/server-and-cloud/ecs/deployment.md#create-an-iam-user-and-assign-permissions)
 
 Use below command to configure AWS CLI
 
@@ -29,7 +29,7 @@ aws configure
 ```
 It will ask us for the credentials which we have saved while creating the IAM user. Use those credentials to authenticate.
 
-## Creat an Elastic Container Registry (ECR) on AWS ECS
+## Create an Elastic Container Registry (ECR) on AWS ECS
 ECR is an AWS service for sharing and deploying container applications. This service offers a fully managed container registry that makes the process of storing, managing, sharing, and deploying your containers easier and faster. To set up an ECR, create a `main.tf` file inside your working directory and put below code in it:
 
 ```console
@@ -61,7 +61,7 @@ To create an ECR, run the `plan` command, you’ll be able to preview the above 
 ```console
 terraform plan
 ```
-Terraform plan will let you see the resource that will be added, changed, or deployed to AWS. In this case, one resource, aws_ecr_repository.app_ecr_repo, will be added to AWS.
+Terraform plan will let you see the resource that will be added, changed, or deployed to AWS. In this case, one resource `aws_ecr_repository.app_ecr_repo`, will be added to AWS.
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/d12e7aa0-364e-4b46-b2d5-f9e96e370c1c)
 
@@ -87,7 +87,7 @@ Finally, refresh the repository’s page to verify you’ve successfully pushed 
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/499f6e80-7ba7-4143-9263-d4142dcf9261)
 
-## Creat an ECS Cluster
+## Create an ECS Cluster
 So far, you’ve created a repository and deployed the image. But whenever you want to launch, you’ll need a target. A cluster acts as the container target. It takes a task into the cluster configuration and runs that task within the cluster.
 To create a cluster where you’ll run your task, add the following configurations to your main.tf file:
 
@@ -150,7 +150,7 @@ resource "aws_ecs_task_definition" "app_task" {
 {{% notice Note %}} Change `containerPort`, `hostPort`, `memory` & `cpu` as per your requirment.{{% notice Note %}}
 
 As described in the above config block, Terraform will create a task named app-first-task and also assign the resources needed to power up the container through this task. This process includes assigning the deployed image, container ports, launch type, and the hardware requirements that the container needs to run.
-Creating a task definition requires ecsTaskExecutionRole to be added to your IAM. The above task definition needs this role, and it is specified as aws_iam_role.ecsTaskExecutionRole.arn. In the next step, create a resource to execute this role as follows:
+Creating a task definition requires `ecsTaskExecutionRole` to be added to your IAM. The above task definition needs this role, and it is specified as `aws_iam_role.ecsTaskExecutionRole.arn`. In the next step, create a resource to execute this role as follows:
 
 ```console
 # main.tf
@@ -182,7 +182,7 @@ Run terraform apply to add these changes to AWS. Navigate to Amazon ECS Task Def
 ## Launch the Container
 At this point, AWS has most of the configurations needed. However, you need to connect all the above-created specifications together to launch your container successfully.
 
-### Creat a VPC
+### Create a VPC
 First, you need to create a Virtual Private Cloud Module (VPC) and subnet to launch your cluster into. VPC and subnet allow you to connect to the internet, communicate with ECS, and expose the application to available zones.
 Go ahead and create a default VPC and subnets information for your AWS availability zones.
 
@@ -222,7 +222,7 @@ resource "aws_alb" "application_load_balancer" {
 ```
 The above configuration creates a load balancer that will distribute the workloads across multiple resources to ensure application’s availability, scalability, and security.
 
-### Creat a Security Group for the Load Balancer
+### Create a Security Group for the Load Balancer
 The next important part of allowing HTTP traffic to access the ECS cluster is to create a security group. This will be crucial for accessing the application later in this guide. Go ahead and add the security group for the load balancer as follows:
 
 ```console
@@ -293,7 +293,7 @@ resource "aws_ecs_service" "app_service" {
 }
 ```
 
-To access the ECS service over HTTP while ensuring the VPC is more secure, create security groups that will only allow the traffic from the created load balancer. To do so, create a aws_security_group.service_security_group resource as follows:
+To access the ECS service over HTTP while ensuring the VPC is more secure, create security groups that will only allow the traffic from the created load balancer. To do so, create a `aws_security_group.service_security_group` resource as follows:
 
 ```console
 # main.tf
@@ -336,7 +336,7 @@ terraform validate
 ```console
 terraform plan
 ```
-* `terraform apply`:This uses your configuration to provision infrastructure on AWS. Remember to enter yes when prompted to do so.
+* `terraform apply`: This uses your configuration to provision infrastructure on AWS. Remember to enter yes when prompted to do so.
 
 ```console
 terraform apply
