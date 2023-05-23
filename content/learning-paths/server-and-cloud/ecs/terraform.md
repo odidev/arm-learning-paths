@@ -349,7 +349,7 @@ You can also access the URL from your load-balancer-dev as the DNS name. Copy it
 
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/5b361020-2547-459c-88fa-b1ed3d1ad00e)
 
-Note that you can get a 503 Service Temporarily Unavailable if you test your application immediately after running the `terraform apply` command. Give the infrastructure a few seconds to bring all components online.
+Note that you can get a `503 Service Temporarily Unavailable` if you test your application immediately after running the `terraform apply` command. Give the infrastructure a few seconds to bring all components online.
 
 To destroy this dev infrastructure and avoid AWS additional costs, run the following command:
 
