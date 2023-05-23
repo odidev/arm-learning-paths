@@ -117,8 +117,6 @@ docker tag nginx [uri]
 ```
 
 {{% notice Note %}} Replace `[uri]` with your respective URI {{% /notice %}}
-The full command for our ECR registry will look like:
-
 
 ## Give the Docker CLI permission to access of your Amazon account
 
