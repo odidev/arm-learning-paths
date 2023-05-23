@@ -12,6 +12,8 @@ learning_objectives:
 prerequisites:
     - An AWS account
     - A computer with Docker installed
+    - Terraform
+    - GIT
 
 author_primary: Jason Andrews
 
