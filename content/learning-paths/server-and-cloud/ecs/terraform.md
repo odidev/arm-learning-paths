@@ -343,3 +343,17 @@ terraform apply
 ```
 After this, You should see the application’s URL on your terminal.
 
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/698495f6-e68d-4bdb-b629-5d1a09cbeddb)
+
+You can also access the URL from your load-balancer-dev as the DNS name. Copy it to your browser. You’ll see that the AWS ECS provisioned application has been served.
+
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/5b361020-2547-459c-88fa-b1ed3d1ad00e)
+
+Note that you can get a 503 Service Temporarily Unavailable if you test your application immediately after running the `terraform apply` command. Give the infrastructure a few seconds to bring all components online.
+
+To destroy this dev infrastructure and avoid AWS additional costs, run the following command:
+
+```console
+terraform destroy
+```
+
