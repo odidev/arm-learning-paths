@@ -79,7 +79,7 @@ Add description and create access key.
 
 Save `Access key` and `Secret access key` somewhere safe, we will need the same while configuring AWS CLI. 
 
-## Create an ECR registry
+## Create an Elastic Container Registry (ECR)
 
 In this step we are going to create the repository in ECR to store our image. We will need the ARN (Amazon Resource Name — a unique identifier for all AWS resources) of this repository to properly tag and upload our image.
 First login to the AWS console with the `test_user` credentials we created earlier. Amazon will ask for your `account id`, `username`, and `password`.
