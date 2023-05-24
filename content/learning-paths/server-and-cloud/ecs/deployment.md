@@ -136,7 +136,7 @@ aws ecr get-login-password --region us-east-2
 We can pipe that token straight into Docker like this. Make sure to replace `[your account number]` with your account number. The ARN at the end is the same as the one we used earlier without the name of the repository at the end.
 
 ```console
-aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-1.amazonaws.com
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin [your account number].dkr.ecr.us-east-2.amazonaws.com
 ```
 
 If all goes well, the response will be Login Succeeded.
