@@ -20,7 +20,7 @@ Any computer which has the required tools installed can be used for this section
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
 
 ## Create an IAM User and assign permissions
-To provision the infrastructure running on AWS ECS, you need an Identity and Access Management (IAM) user account. IAM enables you to manage access to AWS resources securely. You can manage who is authenticated (signed in) and permitted (has permissions) to use resources using IAM. To create an IAM user and assign permission follow [this](../deployment.md#create-an-iam-user-and-assign-permissions)
+To provision the infrastructure running on AWS ECS, you need an Identity and Access Management (IAM) user account. IAM enables you to manage access to AWS resources securely. You can manage who is authenticated (signed in) and permitted (has permissions) to use resources using IAM. To create an IAM user and assign permission follow [this](/lerning-paths/server-and-cloud/ecs/deployment#create-an-iam-user-and-assign-permissions)
 
 Use below command to configure AWS CLI
 
