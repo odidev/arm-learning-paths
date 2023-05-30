@@ -112,7 +112,7 @@ Terraform will perform the following actions:
       + arn                  = (known after apply)
       + id                   = (known after apply)
       + image_tag_mutability = "MUTABLE"
-      + name                 = "my-app-terraform"
+      + name                 = "myapp"
       + registry_id          = (known after apply)
       + repository_url       = (known after apply)
       + tags_all             = (known after apply)
