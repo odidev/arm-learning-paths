@@ -100,6 +100,27 @@ terraform plan
 ```
 Terraform plan will let you see the resource that will be added, changed, or deployed to AWS. In this case, one resource `aws_ecr_repository.app_ecr_repo`, will be added to AWS.
 
+```output
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_ecr_repository.app_ecr_repo will be created
+  + resource "aws_ecr_repository" "app_ecr_repo" {
+      + arn                  = (known after apply)
+      + id                   = (known after apply)
+      + image_tag_mutability = "MUTABLE"
+      + name                 = "my-app-terraform"
+      + registry_id          = (known after apply)
+      + repository_url       = (known after apply)
+      + tags_all             = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
+
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/d12e7aa0-364e-4b46-b2d5-f9e96e370c1c)
 
 To provision the displayed configuration infrastructure on AWS, apply the above execution plan:
