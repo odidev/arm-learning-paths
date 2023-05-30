@@ -130,6 +130,31 @@ terraform apply
 ```
 Enter yes when prompted to allow Terraform to execute this command as expected.
 
+```output
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_ecr_repository.app_ecr_repo will be created
+  + resource "aws_ecr_repository" "app_ecr_repo" {
+      + arn                  = (known after apply)
+      + id                   = (known after apply)
+      + image_tag_mutability = "MUTABLE"
+      + name                 = "my-app-terraform"
+      + registry_id          = (known after apply)
+      + repository_url       = (known after apply)
+      + tags_all             = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+aws_ecr_repository.app_ecr_repo: Creating...
+aws_ecr_repository.app_ecr_repo: Creation complete after 0s [id=myapp]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+
 ![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/3728a859-cc9c-419a-b0d9-3e707e6e986c)
 
 Terraform will create the ECR. You can confirm this on your Amazon Elastic Container Registry Repositories list.
