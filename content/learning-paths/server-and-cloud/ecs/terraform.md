@@ -444,7 +444,62 @@ terraform apply
 ```
 After this, You should see the application’s URL on your terminal.
 
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/698495f6-e68d-4bdb-b629-5d1a09cbeddb)
+```output
+Plan: 9 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + app_url = (known after apply)
+aws_default_subnet.default_subnet_b: Creating...
+aws_default_subnet.default_subnet_a: Creating...
+aws_default_vpc.default_vpc: Creating...
+aws_security_group.load_balancer_security_group: Creating...
+aws_default_subnet.default_subnet_b: Creation complete after 0s [id=subnet-59ed1524]
+aws_default_subnet.default_subnet_a: Creation complete after 0s [id=subnet-9dee6cf6]
+aws_default_vpc.default_vpc: Creation complete after 0s [id=vpc-a0d44ecb]
+aws_lb_target_group.target_group: Creating...
+aws_lb_target_group.target_group: Creation complete after 1s [id=arn:aws:elasticloadbalancing:us-east-2:173141235168:targetgroup/target-group/2832f2b9ca78fe10]
+aws_security_group.load_balancer_security_group: Creation complete after 1s [id=sg-063cda74d5b146ee8]
+aws_alb.application_load_balancer: Creating...
+aws_security_group.service_security_group: Creating...
+aws_security_group.service_security_group: Creation complete after 2s [id=sg-023c421dcd0a6e502]
+aws_ecs_service.app_service: Creating...
+aws_alb.application_load_balancer: Still creating... [10s elapsed]
+aws_ecs_service.app_service: Still creating... [10s elapsed]
+aws_alb.application_load_balancer: Still creating... [20s elapsed]
+aws_ecs_service.app_service: Still creating... [20s elapsed]
+aws_alb.application_load_balancer: Still creating... [30s elapsed]
+aws_ecs_service.app_service: Still creating... [30s elapsed]
+aws_alb.application_load_balancer: Still creating... [40s elapsed]
+aws_ecs_service.app_service: Still creating... [40s elapsed]
+aws_alb.application_load_balancer: Still creating... [50s elapsed]
+aws_ecs_service.app_service: Still creating... [50s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m0s elapsed]
+aws_ecs_service.app_service: Still creating... [1m0s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m10s elapsed]
+aws_ecs_service.app_service: Still creating... [1m10s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m20s elapsed]
+aws_ecs_service.app_service: Still creating... [1m20s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m30s elapsed]
+aws_ecs_service.app_service: Still creating... [1m30s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m40s elapsed]
+aws_ecs_service.app_service: Still creating... [1m40s elapsed]
+aws_alb.application_load_balancer: Still creating... [1m50s elapsed]
+aws_ecs_service.app_service: Still creating... [1m50s elapsed]
+aws_alb.application_load_balancer: Still creating... [2m0s elapsed]
+aws_ecs_service.app_service: Still creating... [2m0s elapsed]
+aws_alb.application_load_balancer: Still creating... [2m10s elapsed]
+aws_alb.application_load_balancer: Creation complete after 2m12s [id=arn:aws:elasticloadbalancing:us-east-2:173141235168:loadbalancer/app/load-balancer-dev/dfebe1a9804a7e3d]
+aws_lb_listener.listener: Creating...
+aws_lb_listener.listener: Creation complete after 0s [id=arn:aws:elasticloadbalancing:us-east-2:173141235168:listener/app/load-balancer-dev/dfebe1a9804a7e3d/c75cce00dcd03c5d]
+aws_ecs_service.app_service: Still creating... [2m10s elapsed]
+aws_ecs_service.app_service: Creation complete after 2m19s [id=arn:aws:ecs:us-east-2:173141235168:service/app-cluster/app-first-service]
+
+Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+app_url = "load-balancer-dev-xxxxxxxxxx.us-east-x.elb.amazonaws.com"
+```
 
 You can also access the URL from your load-balancer-dev as the DNS name. Copy it to your browser. You’ll see that the AWS ECS provisioned application has been served.
 
