@@ -186,7 +186,7 @@ Now that you have an ECR repository ready, it’s time to create the Docker imag
 
 Finally, refresh the repository’s page to verify you’ve successfully pushed the image to the AWS ECR repository.
 
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/499f6e80-7ba7-4143-9263-d4142dcf9261)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/cc056b76-edca-49d0-af4f-de989999f071)
 
 ## Create an ECS Cluster
 So far, you’ve created a repository and deployed the image. But whenever you want to launch, you’ll need a target. A cluster acts as the container target. It takes a task into the cluster configuration and runs that task within the cluster.
