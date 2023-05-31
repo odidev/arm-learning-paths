@@ -91,7 +91,29 @@ terraform init
 ```
 The message `Terraform has been successfully initialized!` should be displayed on your terminal, as shown:
 
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/d54fc2cd-c2fd-40b7-93f1-c7483591f8e9)
+```output
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "4.45.0"...
+- Installing hashicorp/aws v4.45.0...
+- Installed hashicorp/aws v4.45.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+```
 
 To create an ECR, run the `plan` command, you’ll be able to preview the above Terraform configuration file and the resource that will be created:
 
@@ -120,8 +142,6 @@ Terraform will perform the following actions:
 
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
-
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/d12e7aa0-364e-4b46-b2d5-f9e96e370c1c)
 
 To provision the displayed configuration infrastructure on AWS, apply the above execution plan:
 
@@ -154,8 +174,6 @@ aws_ecr_repository.app_ecr_repo: Creation complete after 0s [id=myapp]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
-
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/3728a859-cc9c-419a-b0d9-3e707e6e986c)
 
 Terraform will create the ECR. You can confirm this on your Amazon Elastic Container Registry Repositories list.
 
