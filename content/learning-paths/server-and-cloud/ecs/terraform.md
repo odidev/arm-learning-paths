@@ -177,7 +177,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 Terraform will create the ECR. You can confirm this on your Amazon Elastic Container Registry Repositories list.
 
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/208951cd-140c-4a4b-9ea1-70ca1c14b332)
+![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/e2b0170c-3cf8-4cf7-8fff-c8feeebaa178)
 
 Now that you have an ECR repository ready, it’s time to create the Docker image and upload it to ECR. Follow below steps to do so:
 * [Create the Docker image](/learning-paths/server-and-cloud/ecs/deployment#create-the-docker-image)
