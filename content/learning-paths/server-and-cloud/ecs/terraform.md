@@ -19,52 +19,14 @@ Any computer which has the required tools installed can be used for this section
 
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
 
-## Create an IAM User and assign permissions
-To provision the infrastructure running on AWS ECS, you need an Identity and Access Management (IAM) user account. IAM enables you to manage access to AWS resources securely. You can manage who is authenticated (signed in) and permitted (has permissions) to use resources using IAM. 
-Login to your AWS account as a root user and search for IAM.
-
-![image](https://user-images.githubusercontent.com/87687468/235642307-130785da-6ddd-4eb4-afc3-382d441c1c9d.png)
-
-From the IAM dashboard select `Users` from the left menu and click on `Add user` from the top of the page.
-
-![user](https://user-images.githubusercontent.com/87687468/235642557-f2db9563-7c4f-4882-a40a-d81a3c84b9d3.png)
-
-On the `Add user` screen enter a username and select the check box before `Provide user access to the AWS Management Console`. Then select `I want to create an IAM user` and click on `next`
-
-![image](https://user-images.githubusercontent.com/87687468/236792673-6e6f4690-f06e-45b3-b87d-243872ddc3a6.png)
-
-### Attaching the access policy
-ECS requires permissions for many services such as listing roles and creating clusters in addition to permissions that are explicitly ECS. The best way to add all of these permissions to our new IAM user is to use an Amazon managed policy to grant access to the new user.
-Select `Attach existing policies directly` under `Set permissions` and search for `AdministratorAccess`. Select checkbox next to the policy.
-
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/2b7dacf3-5bb5-457a-b847-10124706917e)
-
-Select `Next` to review our work and create the user.
-
-![image](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/8eb47e5b-e66c-48b7-ba4b-0934a1e3802d)
-
-When you submit this page you will get a confirmation screen. Save all of the information there in safe place we will need all of it when we deploy our container.
-A new user will get created on **IAM>>User** page. Click on the user and go to `Security credentials` section. Click on `create access key`
-
-![image](https://user-images.githubusercontent.com/87687468/236796346-390f5193-b5cf-4132-a18d-37ea23eba5a9.png)
-![image](https://user-images.githubusercontent.com/87687468/236796580-521971ca-d3ad-4ce6-a5c4-47aa59d62427.png)
-
-Select `Command Line Interface (CLI)` and click on `Next`
-
-![image](https://user-images.githubusercontent.com/87687468/236796940-8a5dcb6a-2008-49c2-a117-72379df22f9d.png)
-
-Add description and create access key.
-
-![image](https://user-images.githubusercontent.com/87687468/236797205-a6a795af-6988-41ed-96da-e2da63bd0a4a.png)
-
-Save `Access key` and `Secret access key` somewhere safe, we will need the same while configuring AWS CLI. 
+You will also need am IAM user with `AdministratorAccess` policy attached.
 
 Use below command to configure AWS CLI
 
 ```console
 aws configure
 ```
-It will ask us for the credentials which we have saved while creating the IAM user. Use those credentials to authenticate.
+It will ask us for the credentials of IAM user. Use those credentials to authenticate.
 
 ## Create an Elastic Container Registry (ECR) on AWS ECS
 ECR is an AWS service for sharing and deploying container applications. This service offers a fully managed container registry that makes the process of storing, managing, sharing, and deploying your containers easier and faster. To set up an ECR, create a `main.tf` file inside your working directory and put below code in it:
