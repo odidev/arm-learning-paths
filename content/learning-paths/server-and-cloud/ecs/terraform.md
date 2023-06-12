@@ -19,14 +19,8 @@ Any computer which has the required tools installed can be used for this section
 
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
 
-You will also need am IAM user with `AdministratorAccess` policy attached.
+You will also need am IAM user with `AdministratorAccess` policy attached. Login with that user and [configure](install-guides/aws_access_keys#configure-the-aws-cli) AWS CLI.
 
-Use below command to configure AWS CLI
-
-```console
-aws configure
-```
-It will ask us for the credentials of IAM user. Use those credentials to authenticate.
 
 ## Create an Elastic Container Registry (ECR) on AWS ECS
 ECR is an AWS service for sharing and deploying container applications. This service offers a fully managed container registry that makes the process of storing, managing, sharing, and deploying your containers easier and faster. To set up an ECR, create a `main.tf` file inside your working directory and put below code in it:
