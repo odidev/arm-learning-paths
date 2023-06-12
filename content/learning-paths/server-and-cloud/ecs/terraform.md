@@ -19,7 +19,7 @@ Any computer which has the required tools installed can be used for this section
 
 You will need an [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) to complete this Learning Path. Create an account if you don't have one.
 
-You will also need am IAM user with `AdministratorAccess` policy attached. Login with that user and [configure](install-guides/aws_access_keys#configure-the-aws-cli) AWS CLI.
+You will also need an IAM user with `AdministratorAccess` policy attached. Login with that user and [configure](install-guides/aws_access_keys#configure-the-aws-cli) AWS CLI.
 
 
 ## Create an Elastic Container Registry (ECR) on AWS ECS
