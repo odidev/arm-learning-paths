@@ -18,7 +18,7 @@ If you are new to Terraform, you should look at [Automate Azure instance creatio
 
 ## Before you begin
 
-Any computer which has [Terraform](/install-guides/terraform/), [Ansible](/install-guides/ansible/), and the [Azure CLI](/install-guides/azure-cli/)installed can be used for this section. The computer can be your desktop or laptop computer or a virtual machine.
+Any computer which has [Terraform](/install-guides/terraform/), [Ansible](/install-guides/ansible/), and the [Azure CLI](/install-guides/azure-cli/) installed can be used for this section. The computer can be your desktop or laptop computer or a virtual machine.
 
 You will need an [an Azure portal account](https://azure.microsoft.com/en-in/get-started/azure-portal) to complete this Learning Path. Create an account if you don't have one.
 
