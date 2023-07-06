@@ -90,7 +90,7 @@ You will provision an AWS EC2 instance resource, which requires you to find and 
 
 1. Navigate to the **EC2 Dashboard**, either by searching (`Alt+S`) for `EC2`, or via **Services** > **Compute** > **EC2**.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/246459829-1ecc75fd-a916-4018-87cf-2f804836aaee.png "Navigate to the EC2 Dashboard")
+![tf1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/2845a95f-65ce-4fc0-8445-be404ae9da5f "Navigate to the EC2 Dashboard")
 
 2. On the left menu bar, you will find the **AMI Catalog** from the **Images** pull-down.
    
@@ -102,7 +102,7 @@ You will provision an AWS EC2 instance resource, which requires you to find and 
 
     Copy or make note of the **AMI ID** for 64-bit (Arm), as it will be used for your `ami` argument.
    
-![alt-text #center](https://user-images.githubusercontent.com/97123064/246468548-d4438768-127b-48ae-8a5d-167c386dd87e.png "Copy an Arm-based, Ubuntu AMI ID")
+![tf3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/638961aa-efd8-4834-87e4-8f3fc2d164cb "Copy an Arm-based, Ubuntu AMI ID")
 
 ### Find an Instance Type
 A list of all AWS instance types can be [viewed here](https://aws.amazon.com/ec2/instance-types/). As a general rule, instances with a `g` at the end of their name (e.g., `M7g`, `M6g`, `T4g`) are Arm-based [Graviton](https://aws.amazon.com/ec2/graviton/) instances.
@@ -277,15 +277,15 @@ Go to **EC2 -> Instances** and you should see an instance with the same **Instan
 
 Click on the **Instance ID** to display the **Instance Summary** view which includes more details about your instance. 
    
-![alt-text #center](https://user-images.githubusercontent.com/67620689/226522634-3da95b61-5655-4c27-b5ab-913d3f731c2c.PNG "Locate your instance on the AWS Console")
-   
+![tf6 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/adc55020-4283-4563-9e8a-e2cd1a022bcc "Locate your instance on the AWS Console")
+
 ### SSH into EC2 instance
 
 Connect to your EC2 Instance with your preferred SSH client. You will be using the private key created through [ssh-keygen](/install-guides/ssh#ssh-keys), located at `~/.ssh/id_rsa`.
 
 In the `Instance summary` view, click `Connect`, and select the `SSH client` tab to see the commands used to launch the native SSH client.
 
-![alt-text #center](https://user-images.githubusercontent.com/67620689/226522564-67404d25-85ad-49e1-ba63-ca64725e6e51.PNG "Connect to the EC2 instance with an SSH client")
+![tf7 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/79987d8c-ea3e-4a85-ad2e-a8fdf36a53e0 "Connect to the EC2 instance with an SSH client")
 
 For example, if using a `ubuntu` AMI:
 
