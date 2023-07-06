@@ -281,7 +281,7 @@ The IP address in the `EXTERNAL-IP` column is the one to use.
 
 The WordPress welcome screen will be displayed. 
 
-![homescreen_screenshot](https://user-images.githubusercontent.com/67620689/200745521-1e004de9-f982-4b6d-b7e7-638569da2aec.PNG)
+![aks3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f361e402-4b60-4515-b269-924efdc0121a)
 
 You have successfully installed WordPress on your Arm-based AKS cluster.
 
