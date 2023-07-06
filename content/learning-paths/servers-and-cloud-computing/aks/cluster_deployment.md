@@ -216,11 +216,11 @@ resource_group_name = "arm-aks-demo-rg-exact-wombat"
 
 1. In a browser, go to the Azure Kubernetes services console, select the cluster, and click on connect.
 
-![Connect_screenshot](https://user-images.githubusercontent.com/67620689/201339809-5bc576c8-d945-431f-ab0b-f0b426b1edec.PNG)
+![aks1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/0dcd4342-e4c5-4fd1-9cea-2acac6f71f65)
 
 Instructions for running `az account` and `az aks get-credentials` will be displayed. 
 
-![aks_screenshot](https://user-images.githubusercontent.com/67620689/201339840-5d3a414b-e944-4a3e-96a5-bbbe7a3b13f3.PNG)
+![aks2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/03beef7c-c618-4ef3-aaaa-57e2246964ae)
 
 2. Copy the 2 commands and run them
 
