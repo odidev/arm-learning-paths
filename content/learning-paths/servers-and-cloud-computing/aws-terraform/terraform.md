@@ -109,11 +109,11 @@ A list of all AWS instance types can be [viewed here](https://aws.amazon.com/ec2
 
 For now, select the **T4g** tab to view a list of Amazon EC2 T4g instance sizes.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/245550408-0362bd27-b0e4-411b-87d9-09c572089243.png "Select 'T4g' under General Purpose instances")
+![tf4 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/3ba996a5-47d0-49e3-87aa-be132cdaa953 "Select 'T4g' under General Purpose instances")
 
 For now, use a small, non-production level instance size, such as **t4g.nano**. Copy or make note of this **Instance Size** name, as it will be used for your `instance_type` argument.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/245565342-76176f11-6c9e-4f9e-af62-0b5da2798a5e.png "Make note of the instance type name under 'Instance Size`")
+![tf5 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/c52c703c-0970-4200-8f3a-47d4ad52f277 "Make note of the instance type name under 'Instance Size`")
 
 ### Set your Resource Block Arguments
 
