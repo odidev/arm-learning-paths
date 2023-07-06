@@ -38,11 +38,13 @@ Go to My Security Credentials
 
 On Your Security Credentials page click on `Create access key`
 
-![alt-text #center](https://user-images.githubusercontent.com/87687468/190137925-c725359a-cdab-468f-8195-8cce9c1be0ae.png "Access keys")
+![test3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/2a07ed91-29aa-4f7a-ba17-194817b1d960 "Access keys")
+
 
 Copy the `Access key ID` and `Secret access key`
 
-![alt-text #center](https://user-images.githubusercontent.com/87687468/190138349-7cc0007c-def1-48b7-ad1e-4ee5b97f4b90.png "Copy keys")
+![test4 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/163f2df2-7e27-4ea8-ad98-ede5050f2ebe "Copy keys")
+
 
 ## Configure the AWS CLI
 
