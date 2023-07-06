@@ -242,4 +242,4 @@ wordpress-mysql   ClusterIP      None             <none>        3306/TCP       7
 
 At this point, point a browser to the external IP address (in this case, it's 3.145.125.76) and see the WordPress welcome screen as shown below.
 
-![image](https://user-images.githubusercontent.com/87687468/203516285-2e700357-0adb-4520-9fcc-ae22444529a2.png)
+![eks](https://github.com/odidev/arm-learning-paths/assets/40816837/ed1cb1db-f099-47d9-b159-62c349cbb747)
