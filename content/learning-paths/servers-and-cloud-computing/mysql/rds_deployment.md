@@ -26,7 +26,7 @@ resource "aws_db_instance" "Testing_Mysql" {
   db_name              = "mydb"
   engine               = "mysql"
   engine_version       = "8.0.28"
-  instance_class       = "db.t3.micro"
+  instance_class       = "db.m6g.large"
   parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
   username             = var.username
@@ -43,7 +43,7 @@ resource "aws_db_instance" "Testing_Mysql" {
 
 To find the correct instance type for RDS, check the [list](https://aws.amazon.com/rds/mysql/instance-types/) of supported instance types. Select a Graviton (Arm) based instance type.
 
-![Screenshot (260)](https://user-images.githubusercontent.com/92315883/209249327-3755d7ef-581b-456c-a64b-e2167080dd59.png)
+![msql1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/32c7278b-2a3d-4fa6-a559-e5b5ab5961f6)
 
 Create a `credential.tf` file, for passing your secret keys and password. Here is the file content:
 
@@ -89,7 +89,7 @@ Creating the RDS database may take a few minutes.
 
 To verify the setup on AWS console. Go to **RDS » Databases**, you should see the instance running.  
 
-![Screenshot (257)](https://user-images.githubusercontent.com/92315883/209247626-2df854ca-a781-46b0-aeba-076a23b0c1fb.png)
+![msql2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/b79fc640-519b-41cb-90c9-ac7d7b14ddc0)
 
 ## Connect to RDS using EC2 instance
 
@@ -97,8 +97,7 @@ To access the RDS instance, make sure that your instance is correctly associated
 
 To connect to the RDS instance, you need the `Endpoint` of the RDS instance. To find the Endpoint, Go to **RDS » Dashboard » {{YOUR_RDS_INSTANCE}}**.
 
-![Screenshot (280)](https://user-images.githubusercontent.com/92315883/209741254-55b40b52-1c56-482a-ab48-e33f510a1cf6.png)
-
+![msql3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f0924e19-60fa-4b52-ac78-20aa7781b235)
 
 Now, connect to RDS with the MySQL Client installed locally using the above Endpoint. Use the `username` and `password` mentioned in the `credential.tf` file.
 
