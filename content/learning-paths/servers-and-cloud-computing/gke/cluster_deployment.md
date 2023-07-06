@@ -28,17 +28,17 @@ Three tools are required on the computer you are using. Follow the links to inst
 
 1. Log in to your GCP account and create a project in the console using the dropdown menu next to the Google Cloud logo. 
 
-![Untitled](https://user-images.githubusercontent.com/92863151/215955072-86a16917-2607-4e67-83b4-4303d3c1ffa6.png)
+![cd1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f919ddec-5a21-41e1-ac41-343250fe920a)
 
 2. Click **New Project** on the top right corner.
 
-![Untitled](https://user-images.githubusercontent.com/92863151/215955423-5c97a106-bafe-41bd-9275-e0e8aa5eda3f.png)
+![cd2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/91229934-6f67-42b3-bc44-a0670e709151)
 
 3. Enter the name of your project in the **Project name** field.
 
 4. Click **Create**. The console navigates to the Dashboard page and your project is created within a few minutes.  
 
-![215677455-5b6bf782-fbfa-43f3-b79e-4808d2975214](https://user-images.githubusercontent.com/92863151/215962792-0e1b4b75-38c1-42c6-9dc8-1c31012cbde0.png)
+![cd3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ad4cc62a-aff4-4784-9bed-10f0afe20594)
 
 5. Go to the **[Dashboard](https://console.cloud.google.com/home?_ga=2.56408877.721166205.1675053595-562732326.1671688536&_gac=1.125526520.1675155465.CjwKCAiAleOeBhBdEiwAfgmXfwdH3kCFBFeYzoKSuP1DzwJq7nY083_qzg7oyP2gwxMvaE0PaHVgFhoCmXoQAvD_BwE)** in the Google Cloud console. 
 
@@ -68,15 +68,15 @@ Service Account credentials are needed for Terraform to interact with the **Goog
 
 2. Click on **CREATE SERVICE ACCOUNT**. 
 
-![service](https://user-images.githubusercontent.com/92863151/215972459-56135d89-05ad-4e48-b523-9773775b944b.png)
+![cd5 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/1d5e98a0-3e10-4d19-a0c3-52f3e44d4da8)
 
 3. Enter a **Service account name** and click on **Create and continue**. 
 
-![service name](https://user-images.githubusercontent.com/92863151/215978422-ff66739a-d4ac-465c-b752-1606de0618bb.png)
+![cd6 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/56c355ca-3f23-4051-aaa7-06ca3ae86a2c)
 
 4. When promoted for a role select **Basic: Owner** from dropdown menu and Click the **DONE** button to finish service account creation. 
 
-![image](https://user-images.githubusercontent.com/92863151/215679930-b6fa31e4-9f8c-427a-af12-96047bbe1158.png)
+![cd7 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/994e814f-bd6b-4410-a0c1-d50261cc90c6)
 
 Save your service account name for a future step, it will be of the form `your-service-account-name@your-project-id.iam.gserviceaccount.com`
 
@@ -349,17 +349,17 @@ Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
 
 1. In the Google Cloud console go to **Kubernetes Engine » Clusters**.
 
-![ke cluster](https://user-images.githubusercontent.com/92863151/216003253-5d58eb04-59b4-4785-a9ce-0372beb4dd5a.jpg)
+![cd8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/fa898c1e-e42c-4a48-a8a4-e7f872b4a8c9)
 
 2. In Kubernetes Engine, select the **cluster** and use the three dots to select **Connect**.
 
-![Untitled](https://user-images.githubusercontent.com/92863151/215472556-5c3a2e09-d7b2-40eb-8643-7b23f074b5ec.png)
+![cd9 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f994b8bb-a5e5-4d39-8a6a-3fb383c9fbfb)
 
 3. Copy the `gcloud` command shown 
 
 This command will retrieve the access credentials for your cluster and automatically configure kubectl. 
 
-![image](https://user-images.githubusercontent.com/92863151/216004839-165a8333-569b-455a-a1a2-1686e9d57e9e.png)
+![cd10 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/3b320afc-edf5-4426-adf6-ce1f5b6dd4ba)
 
 4. Paste the `gcloud` command in your terminal.
 
