@@ -211,13 +211,13 @@ You have successfully created and executed the Lambda function on AWS.
 
 To verify the creation of the Lambda function to to the AWS console and select AWS Lambda. Click on Functions and verify the Lambda function `indexjs` is displayed.
 
-![Screenshot (348)](https://user-images.githubusercontent.com/92315883/216253082-792bc564-dbb1-46ec-a3ba-e3220f31dd2d.jpg)
+![test10 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/6f2e261c-424d-4f1d-b00a-5b555c267e6d)
 
 Click on the function `indexjs` and scroll down to the `Runtime settings`
 
 You will see the Architecture listed as arm64
 
-![Screenshot (358)](https://user-images.githubusercontent.com/92315883/216524063-a3d36a0a-9b42-44c5-a5b6-a0c90a3725d3.png)
+![test11 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/3ac16c1c-e47c-4c85-8de5-1c55cf6c7718)
 
 You can use the Test tab of the Lambda console to run the function again.
 
