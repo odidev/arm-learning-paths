@@ -88,7 +88,6 @@ If creating a new key pair, name the key pair, then click `Create key pair`. Thi
 It is strongly recommended that you create (or use an existing) [security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html) to ensure that only users on your IP address can access your instance. Simple settings can be set here, such as selecting `My IP` from the `Allow SSH traffic from` pull-down menu. Other settings can be left as default.
 
 ![alt-text #center](https://user-images.githubusercontent.com/97123064/243441540-ec1e0f02-29bb-4f4e-b762-90703bd268e4.png "Configure a security group")
-![aws11 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/cf609a1e-8d6c-4306-995d-9e9c283528b5 "Configure a security group")
 
 For advanced settings, it is recommended that you search `security groups` and create and configure such a group in this dialog. You can then select that group when creating the instance.
 
