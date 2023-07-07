@@ -27,15 +27,15 @@ Once logged in, you will be presented with the [Oracle Cloud console](https://do
 
 If this is your first time logging in, it is recommended to create a `compartment` to store your compute instances. Search for `Compartments` or navigate to `Identity & Security` > `Compartments` from the menu.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244114923-3c25e3c2-34b5-4d3b-8779-c96a899ef079.png "Navigate to the `Compartments` page")
+![oci1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/9c2af280-5b60-49d0-8b4b-8beb1f4adf87 "Navigate to the `Compartments` page")
 
 Use the `Create Compartment` button to start configuring your compartment.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244119606-a04407f5-71ec-4560-8535-8e92148ad405.png "Click on 'Create Compartment'")
+![oci2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/5c42da46-1686-4ace-aba4-b54ae010d080 "Click on 'Create Compartment'")
 
 Create a compartment with a meaningful name (and optional description), for example `Ampere_A1_instances`. When finished, click `Create Compartment`. Full details on using compartments are described in the Oracle [documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/compartments/managingcompartments.htm).
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244123626-52cc723d-ddd6-478d-88aa-7161c1d5f1c4.png "Create a name and description for the compartment")
+![oci3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/98fb388f-96d1-4e69-9c4b-ad32d8b89ff5 "Create a name and description for the compartment")
 
 ## Create your compute instance
 
@@ -51,41 +51,41 @@ Use the `Create Instance` button to get to the `Create compute instance` dialog.
 
 Give your instance a meaningful, but arbitrary, name. This is particularly useful when creating multiple instances. Select the `compartment` you created above to be the location for this instance.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244482401-5a4ea63b-68c7-4e41-a19e-846fadcb15a9.png "Specify a name for the instance and select your compartment")
+![oci6 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/bcb91210-c666-41e9-980f-20e8760d03bb "Specify a name for the instance and select your compartment")
 
 ### Placement
 
 These settings are generally left as default. See the Oracle [documentation](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a full description.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244480624-0cb7112f-3b14-48e1-a68c-dd995fb5bc45.png "Choose availability domain placement")
+![oci7 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/1c6218ea-6d88-4410-bb3c-6de61783f4a7 "Choose availability domain placement")
 
 ### Select instance image and shape
 
 Click the `Edit` button to configure which OS image and instance shape you will use.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244479595-178b251b-9357-4aa0-96bc-1f7802798da0.png "Click 'Edit' to change the image and shape")
+![oci8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/b901a900-ab76-40c9-876f-49b881911c7e "Click 'Edit' to change the image and shape")
 
 Click `Change image` to select the operating system image. 
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244734737-478d4f93-02da-434a-946b-200d08c7c415.png "Click `Change image'")
+![oci9 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/83f28565-52c7-46e1-a057-2cabbffe89aa "Click `Change image'")
 
 Several images are available from the [marketplace](https://cloudmarketplace.oracle.com/marketplace), but for now, select a standard image, such as `Canonical Ubuntu 22.04` from the list of `Platform images`. Click `Select image` to confirm.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244742845-8f3b5bb8-f59b-407f-a77a-fb17ffe0cf43.png "Choose a standard image")
+![oci10 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ad7f2637-1e66-47f2-965b-5a1d325389a7 "Choose a standard image")
 
 Click `Change shape`, to select the instance type and processor series.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244734750-4477f282-02b4-428b-8c7b-448be8ec31ff.png "Click `Change shape'")
+![oci11 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/62f68a19-ec5e-4e85-8ca1-fc5b4fa24247 "Click `Change shape'")
 
 Select the `Ampere` Arm-based processor shape series. Select the `Shape name` (for example `VM.Standard.A1.Flex`), and use slider to select the number of processors you wish to use. At the time of writing, the free tier allows up to 4 Ampere processors (across all instances) to be used. Click `Select shape` to confirm.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244744932-bed21937-bfd7-4643-b2d8-5e0582873103.png "Choose an Ampere Arm-based processor shape")
+![oci12 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/26c13dfa-f0ed-4b70-b945-7f21945b8e90 "Choose an Ampere Arm-based processor shape")
 
 ### Networking
 
 These settings can likely be left as default. Ensure that a public IP address is assigned so that you can access the instance.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244747189-b3f40d99-ffe0-4768-a348-6fa8b3e92d74.png "Configure network settings if necessary")
+![oci13 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/17d18c57-8e5a-4298-87ba-2c31971b3184 "Configure network settings if necessary")
 
 ### Add SSH keys
 
@@ -93,23 +93,23 @@ To be able to access the instance, you must use a [key pair](https://docs.oracle
 
 Note that if you do not generate a key and have access to the private key, you will not be able to connect to the instance.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244751504-5c258c49-f53d-4afc-9fbd-e87e086ed15c.png "Create or upload a key pair")
+![oci14 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/b4cb04f7-7a99-439c-8c48-ec585209ae5f "Create or upload a key pair")
 
 ### Boot volume and other advanced options
 
 These can likely be left as default. See the Oracle [documentation](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumes.htm) for settings information if necessary.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244750495-cbfceecd-ede0-4b9c-a896-921823f514f3.png "Configure boot volume and advanced options if necessary")
+![oci15 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/2eba50ca-a796-4264-9fb3-d95b9cb62b5f "Configure boot volume and advanced options if necessary")
 
 ### Launch instance
 
 When all options are set, click `Create` to get started. 
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244753930-375d8b53-9f1f-4fe4-95ba-aac6d554c05a.png "Create the VM instance")
+![oci16 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/19da75be-305c-42a1-b4b7-320976270723 "Create the VM instance")
 
 Your compute instance will be created and be available after initialization, when status is shown as `RUNNING`. Note the `Public IP address` and `Username` of your instance as you will need these to connect to your instance.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/244758586-8d9c0515-d8bb-4434-8bd2-83362d4e4ac6.png "Confirm the instance is running and note instance details")
+![oci17 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f6152167-c298-4aa9-8ab9-1488d60403f8 "Confirm the instance is running and note instance details")
 
 ## Connect to your instance
 
