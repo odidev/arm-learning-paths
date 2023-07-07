@@ -33,15 +33,15 @@ The easiest way to launch your instance is via the [AWS Console](https://console
 
 Note the `region` you have logged into (for example `us-east-1`) is displayed in the upper right corner. You can select a different location from the pull-down menu if your default region does not offer Graviton servers.
 
-![alt-text #center](https://user-images.githubusercontent.com/67620689/235883425-70e3e428-1f31-4603-9893-0c4034166615.png "Select an appropriate region")
+![aws1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/82690ca3-49b2-4583-a233-2af623bfaa7b "Select an appropriate region")
 
 Navigate to the `EC2 Dashboard`, either by searching (`Alt+S`) for `EC2`, or via `Services` > `Compute` > `EC2`.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/246459829-1ecc75fd-a916-4018-87cf-2f804836aaee.png "Navigate to the EC2 Dashboard")
+![aws2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/6e5a2a0d-b9ee-4846-8a4e-c43841a31e64 "Navigate to the EC2 Dashboard")
 
 Use the `Launch instance` pull-down menu and select `Launch instance`.
 
-![alt-text #center](https://user-images.githubusercontent.com/67620689/235869570-2a6e437f-e98f-4b1e-90b1-0abeb0c03b67.PNG "Launch an Amazon EC2 instance")
+![aws3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/47a81315-d996-4b52-9e51-0c2478092299 "Launch an Amazon EC2 instance")
 
 ### Name your instance {#name}
 
@@ -69,7 +69,7 @@ Select an appropriate `instance type` for your compute needs from the pull-down 
 
 Scrolling down, there is an option to also `configure storage` if necessary.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/243395684-c6a3c52d-a9c1-4c35-a31b-8be13faa8246.png "Configure storage options")
+![aws8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/69e0e0ea-2f7d-40a2-9c9c-914aa5b12b86 "Configure storage options")
 
 ### Set a Key Pair
 
@@ -77,7 +77,7 @@ To be able to access the instance, you must use a [key pair](https://docs.aws.am
 
 If this is your first time logging in, you will need to select `Create new key pair`. If you have an existing key pair, select it from the pull-down menu.
 
-![alt-text #center](https://user-images.githubusercontent.com/97123064/243401518-d90737eb-9a19-438d-9f9d-24f6400512b1.png "Select or create a key pair")
+![aws9 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/0154a180-944c-40ec-94c4-4a198f9476db "Select or create a key pair")
 
 If creating a new key pair, name the key pair, then click `Create key pair`. This will initialize the key pair and save the private key to your local machine. Ensure that the private key is safe and accessible on your local machine. 
 
@@ -88,6 +88,7 @@ If creating a new key pair, name the key pair, then click `Create key pair`. Thi
 It is strongly recommended that you create (or use an existing) [security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html) to ensure that only users on your IP address can access your instance. Simple settings can be set here, such as selecting `My IP` from the `Allow SSH traffic from` pull-down menu. Other settings can be left as default.
 
 ![alt-text #center](https://user-images.githubusercontent.com/97123064/243441540-ec1e0f02-29bb-4f4e-b762-90703bd268e4.png "Configure a security group")
+![aws11 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/cf609a1e-8d6c-4306-995d-9e9c283528b5 "Configure a security group")
 
 For advanced settings, it is recommended that you search `security groups` and create and configure such a group in this dialog. You can then select that group when creating the instance.
 
@@ -114,7 +115,7 @@ You can interact with your instance via the browser (EC2 Instance Connect) or vi
 
 In the `Instance summary` view, click `Connect`, and select the `EC2 Instance Connect` tab. Click the `Connect` button to open a terminal in the browser.
 
-![alt-text #center](https://user-images.githubusercontent.com/67620689/235869820-d1d697fc-934f-42e5-94ab-aa013a6d7588.PNG "Connect to the EC2 instance from the browser")
+![aws15 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/cf368c99-209c-46e5-83b9-6a0f5efdc55e "Connect to the EC2 instance from the browser")
 
 Once connected, you are now ready to use your instance.
 
@@ -122,7 +123,7 @@ Once connected, you are now ready to use your instance.
 
 You can connect to the instance with your preferred SSH client. In the `Instance summary` view, click `Connect`, and select the `SSH client` tab to see the command used to launch the native SSH client.
 
-![alt-text #center](https://user-images.githubusercontent.com/67620689/235870001-20716b2b-8d95-468b-bccb-b44bba7a2303.PNG "Connect to the EC2 instance with an SSH client")
+![aws16 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/c43392c3-80d8-4078-89d9-73524cb05911 "Connect to the EC2 instance with an SSH client")
 
 For example if using `ubuntu` image:
 
