@@ -130,7 +130,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ### Verify created resource
 In the Google Cloud console, go to the [VM instances page](https://console.cloud.google.com/compute/instances?_ga=2.159262650.1220602700.1668410849-523068185.1662463135). The VM created through Terraform must be displayed in the screen.
 
-![image](https://user-images.githubusercontent.com/67620689/204244210-00741212-de05-49f9-b4eb-e4943b809c70.PNG)
+![test8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/5da366a4-7cfd-4736-bbdd-335ddadf41b7)
 
 ## SSH into the launched instance
 
