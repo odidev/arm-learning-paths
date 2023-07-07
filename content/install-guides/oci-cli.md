@@ -93,6 +93,6 @@ Open the Profile menu and click Tenancy: <your_tenancy_name> to locate your OCID
 
 To locate your API KEYS open your profile and click API KEYS:
 
-![test-2](https://github.com/odidev/arm-learning-paths/assets/40816837/6f397e99-bb6a-4008-96b9-c43f4baf1565 "Click add API key, from there generate your API key pair")
+![test-2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/6f397e99-bb6a-4008-96b9-c43f4baf1565 "Click add API key, from there generate your API key pair")
 
 After a successful log in, you can use the OCI CLI and automation tools like [Terraform](../terraform) from the terminal.
