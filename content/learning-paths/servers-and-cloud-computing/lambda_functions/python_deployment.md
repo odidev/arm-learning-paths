@@ -145,7 +145,7 @@ You have successfully created and executed the Python Lambda function on AWS.
 
 To verify the creation of the Lambda function to to the AWS console and select AWS Lambda. Click on Functions and verify the Lambda function `python_lambda` is displayed.
 
-![Screenshot (354)](https://user-images.githubusercontent.com/92315883/216284315-dec9b16c-bc34-4752-8408-e5af819ea030.png)
+![test9 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/641885e0-b352-4548-b1e4-d346f124307d)
 
 You can use the Test tab of the Lambda console to run the function again.
 
