@@ -41,7 +41,7 @@ To deploy an RDS instance of MariaDB you can use Terraform files.
 
 ```console
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_db_parameter_group" "default" {
@@ -120,7 +120,7 @@ Wait for the deployment and then go to the AWS console.
 
 In the AWS console, go to **RDS » Databases**, and check if the RDS instance is running.  
 
-![Screenshot (374)](https://user-images.githubusercontent.com/92315883/218340185-097c876e-2c3c-4630-adef-ac9b905c08ec.png)
+![Screenshot (567) #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ced3f719-37f9-4282-8a39-299989d9dd4d)
 
 ## Connect to RDS 
 
@@ -128,7 +128,7 @@ Make sure that the instance is correctly associated with a security group and VP
 
 To connect to the RDS instance, find the endpoint. To find the Endpoint, go to **RDS »Dashboard » {{YOUR_RDS_INSTANCE}}**.
 
-![Screenshot (372)](https://user-images.githubusercontent.com/92315883/218339661-0ac51c95-8789-42bc-962c-0b43fc64fb5b.png)
+![Screenshot (568) #center](https://github.com/odidev/arm-learning-paths/assets/40816837/52947cc1-7720-4c41-84a0-c4e03d8b1458)
 
 Using the **Endpoint** and the **user** and **password** mentioned in the `credential.tf` file you can connect using `mariadb`
 
