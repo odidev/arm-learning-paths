@@ -44,7 +44,7 @@ Three tools are required on the computer you are using. Follow the links to inst
 
 6. Save the **Project ID** as shown in the **Project info** Dashboard. You will need it for future steps.
 
-![image](https://user-images.githubusercontent.com/92863151/216250615-c4ca08e0-052c-4573-97db-8a0698b9c341.png)
+![image #center](https://user-images.githubusercontent.com/92863151/216250615-c4ca08e0-052c-4573-97db-8a0698b9c341.png)
 
 ### Acquire GCP Access Credentials
 
