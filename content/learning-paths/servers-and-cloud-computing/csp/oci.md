@@ -45,7 +45,7 @@ Search for `Instances` or navigate the menu to `Compute` > `Instances`.
 
 Use the `Create Instance` button to get to the `Create compute instance` dialog.
 
-![alt-text #center](https://github.com/odidev/arm-learning-paths/assets/40816837/e01421dc-e397-4e84-929b-89971baf7534 "Click on 'Create instance'")
+![alt-text #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/e8e21133-8174-491c-b640-89cda8025031 "Click on 'Create instance'")
 
 ### Name your instance
 
