@@ -29,7 +29,7 @@ Locate [Virtual Machines](https://portal.azure.com/#view/HubsExtension/BrowseRes
 
 You will be presented with the `Create a virtual machine` dialog.
 
-![az1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f40743a4-b118-4f1f-970d-f09ceda3cf0d "Create an Azure virtual machine")
+![az1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/0d7dbd32-3ea2-4b5a-9886-2218ca78cc8a "Create an Azure virtual machine")
 
 ## Project details
 
@@ -37,7 +37,7 @@ This section is used to separate instances, usually for internal budgeting or ac
 
 If a `Resource group` to contain your VMs does not yet exist, click on `Create new`. If you do not create a group, a new one will automatically be created based on your first VM name.
 
-![az2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/dadd80b5-febb-425f-bdf7-444173d518a9 "Select or create a Resource group")
+![az2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/f15a254d-4c32-4541-8c7c-110d0c3742d7 "Select or create a Resource group")
 
 ## Instance details
 
@@ -47,25 +47,25 @@ This section defines key configuration details of the virtual machine.
 
 Give your virtual machine (VM) a meaningful, but arbitrary name. This is especially useful if you intend to create multiple VMs.
 
-![az3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ecd9ab54-a172-4dad-aa74-20c9e6f660f6 "Specify a name for the virtual machine")
+![az3 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/52fc152b-6c28-4164-8b09-352a203f2c17 "Specify a name for the virtual machine")
 
 ### Region
 
 This is the location of the server where your VM will reside. While it is generally recommended to select a region closest to your location, not all regions may support Arm-based servers. You may need to change region to get access to such a server.
 
-![az4 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/69c236c8-3137-4c98-8b7d-a77558c61528 "Select an appropriate region")
+![az4 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/f51d05ee-217e-4f48-b94a-d4248cae0fd5 "Select an appropriate region")
 
 ### Availability options / Security type
 
 These are reliability and security settings. They can generally be left as default.
 
-![az5 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/08c1625a-ac1a-4fdf-ae90-2ea1652d111c "Select Availability options and Security type if necessary")
+![az5 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/a3b6181b-c15a-4015-a5ee-b6c299c0c214 "Select Availability options and Security type if necessary")
 
 ### Image
 
 This is the operating system that will run on your VM. Select the appropriate one from the pull-down. Some will have additional pricing associated with them. 
 
-![az6 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f335b7bd-e66e-4f64-afd4-56e55700d036 "Select an image available for Arm VMs")
+![az6 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/2ba2a2bc-cace-440c-80d0-f5050f30ad49 "Select an image available for Arm VMs")
 
 Not all are available for Arm VMs. To filter, click on `See all images`, then select `Arm64` from the `Image Type` filter.
 
@@ -93,7 +93,7 @@ This is a low-cost pricing option. See [Azure documentation](https://learn.micro
 
 Select an appropriate [size](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes) for your compute needs from the pull-down.
 
-![az11 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/85f0cc3d-5355-4309-86ec-bea0e63600ca "Select an appropriate VM size")
+![az11 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/49e9bf84-9ab4-4b61-a122-13e133bc59cb "Select an appropriate VM size")
 
 ## Administrator account
 
@@ -109,19 +109,19 @@ This section defines how users [connect](https://learn.microsoft.com/en-us/azure
 
  Create an appropriate username. The default username is `azureuser`. Windows VMs will also require a password to be set.
 
-![az13 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/7f566121-b633-4316-80dd-4109472fea20 "Set a username for the VM")
+![az13 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/76ad2452-9c74-4de0-92db-32a33b047ade "Set a username for the VM")
 
  ### SSH public key resource / Key pair name (Linux systems)
 
  Use an existing key pair or generate a new one, as defined by `Key pair name`. If `Generate new key pair` is selected, your private key will be generated during the [Create](#create-instance) step.
 
-![az14 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/9a5406ac-0dd3-4f52-b060-b4f93cdc62be "Select or create a key pair")
+![az14 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/224e2eba-dba7-4e0e-8c59-a0b62406bdd3 "Select or create a key pair")
 
 ## Inbound port rules
 
 These settings can be used to limit access to your VM. See the documentation for more info. This can generally be left as default. You can connect to Linux machines using SSH. You can connect to Windows machines using Remote Desktop Protocol (RDP).
 
-![az15 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/1e6f5559-cfcd-488f-8a08-2e12d93afbaf "Configure inbound ports if necessary")
+![az15 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/1162315f-4b6f-44b4-ad2a-30874184287b "Configure inbound ports if necessary")
 
 ## Licensing (Windows only)
 
@@ -131,7 +131,7 @@ Tick the box to confirm you have an appropriate license to deploy a Windows virt
 
 There are other tabs defining many advanced settings. They can generally be left as default.
 
-![az16 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/2c36dd12-9733-4104-bef4-cd8a269f76a1 "Additional settings to configure the VM")
+![az16 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/8777ba85-aaa7-4454-88bd-88c82543bb46 "Additional settings to configure the VM")
 
 ## Create instance
 
