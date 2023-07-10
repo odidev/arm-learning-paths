@@ -33,15 +33,15 @@ The easiest way to launch your instance is via the [AWS Console](https://console
 
 Note the `region` you have logged into (for example `us-east-1`) is displayed in the upper right corner. You can select a different location from the pull-down menu if your default region does not offer Graviton servers.
 
-![aws1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/82690ca3-49b2-4583-a233-2af623bfaa7b "Select an appropriate region")
+![aws1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/39c984ec-76cd-4eca-8290-3cc03f2d36a1 "Select an appropriate region")
 
 Navigate to the `EC2 Dashboard`, either by searching (`Alt+S`) for `EC2`, or via `Services` > `Compute` > `EC2`.
 
-![aws2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/6e5a2a0d-b9ee-4846-8a4e-c43841a31e64 "Navigate to the EC2 Dashboard")
+![aws2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/d9ae1336-f3bd-4566-a1a9-bab7d28a1bf1 "Navigate to the EC2 Dashboard")
 
 Use the `Launch instance` pull-down menu and select `Launch instance`.
 
-![aws3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/47a81315-d996-4b52-9e51-0c2478092299 "Launch an Amazon EC2 instance")
+![aws3 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/68ed1a05-6111-44d1-91f6-3a65f02910d7 "Launch an Amazon EC2 instance")
 
 ### Name your instance {#name}
 
@@ -69,7 +69,7 @@ Select an appropriate `instance type` for your compute needs from the pull-down 
 
 Scrolling down, there is an option to also `configure storage` if necessary.
 
-![aws8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/69e0e0ea-2f7d-40a2-9c9c-914aa5b12b86 "Configure storage options")
+![aws8 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/95280cd5-13eb-469f-859a-3e2fdfde22ae "Configure storage options")
 
 ### Set a Key Pair
 
@@ -77,7 +77,7 @@ To be able to access the instance, you must use a [key pair](https://docs.aws.am
 
 If this is your first time logging in, you will need to select `Create new key pair`. If you have an existing key pair, select it from the pull-down menu.
 
-![aws9 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/0154a180-944c-40ec-94c4-4a198f9476db "Select or create a key pair")
+![aws9 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/ca45a15c-845b-4be5-b06a-4ca2a5705104 "Select or create a key pair")
 
 If creating a new key pair, name the key pair, then click `Create key pair`. This will initialize the key pair and save the private key to your local machine. Ensure that the private key is safe and accessible on your local machine. 
 
@@ -114,7 +114,7 @@ You can interact with your instance via the browser (EC2 Instance Connect) or vi
 
 In the `Instance summary` view, click `Connect`, and select the `EC2 Instance Connect` tab. Click the `Connect` button to open a terminal in the browser.
 
-![aws15 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/cf368c99-209c-46e5-83b9-6a0f5efdc55e "Connect to the EC2 instance from the browser")
+![aws15 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/1fbe5742-6bba-4fbc-90ed-9ec5396b4ffa "Connect to the EC2 instance from the browser")
 
 Once connected, you are now ready to use your instance.
 
@@ -122,7 +122,7 @@ Once connected, you are now ready to use your instance.
 
 You can connect to the instance with your preferred SSH client. In the `Instance summary` view, click `Connect`, and select the `SSH client` tab to see the command used to launch the native SSH client.
 
-![aws16 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/c43392c3-80d8-4078-89d9-73524cb05911 "Connect to the EC2 instance with an SSH client")
+![aws16 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/3af8196d-5059-458a-a6ec-48c87e65acca "Connect to the EC2 instance with an SSH client")
 
 For example if using `ubuntu` image:
 
