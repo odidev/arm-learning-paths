@@ -43,7 +43,7 @@ resource "aws_db_instance" "Testing_Mysql" {
 
 To find the correct instance type for RDS, check the [list](https://aws.amazon.com/rds/mysql/instance-types/) of supported instance types. Select a Graviton (Arm) based instance type.
 
-![msql1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/32c7278b-2a3d-4fa6-a559-e5b5ab5961f6)
+![msql1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/914bee48-77dc-4f60-af88-922126c4fdf3)
 
 Create a `credential.tf` file, for passing your secret keys and password. Here is the file content:
 
@@ -89,7 +89,7 @@ Creating the RDS database may take a few minutes.
 
 To verify the setup on AWS console. Go to **RDS » Databases**, you should see the instance running.  
 
-![msql2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/b79fc640-519b-41cb-90c9-ac7d7b14ddc0)
+![msql2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/232652f5-6639-46f3-ade9-9a598e0e96b1)
 
 ## Connect to RDS using EC2 instance
 
@@ -97,7 +97,7 @@ To access the RDS instance, make sure that your instance is correctly associated
 
 To connect to the RDS instance, you need the `Endpoint` of the RDS instance. To find the Endpoint, Go to **RDS » Dashboard » {{YOUR_RDS_INSTANCE}}**.
 
-![msql3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/f0924e19-60fa-4b52-ac78-20aa7781b235)
+![msql3 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/24f79df1-23f0-486d-a3e7-a5a307939d6c)
 
 Now, connect to RDS with the MySQL Client installed locally using the above Endpoint. Use the `username` and `password` mentioned in the `credential.tf` file.
 
