@@ -120,7 +120,7 @@ Wait for the deployment and then go to the AWS console.
 
 In the AWS console, go to **RDS » Databases**, and check if the RDS instance is running.  
 
-![Screenshot (567) #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ced3f719-37f9-4282-8a39-299989d9dd4d)
+![mariadb1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/e692ab7a-2ab5-4017-b435-90fddec603ba)
 
 ## Connect to RDS 
 
@@ -128,7 +128,7 @@ Make sure that the instance is correctly associated with a security group and VP
 
 To connect to the RDS instance, find the endpoint. To find the Endpoint, go to **RDS »Dashboard » {{YOUR_RDS_INSTANCE}}**.
 
-![Screenshot (568) #center](https://github.com/odidev/arm-learning-paths/assets/40816837/52947cc1-7720-4c41-84a0-c4e03d8b1458)
+![mariadb2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/df03a3ff-a91a-41de-a980-bcadee8ff6fd)
 
 Using the **Endpoint** and the **user** and **password** mentioned in the `credential.tf` file you can connect using `mariadb`
 
