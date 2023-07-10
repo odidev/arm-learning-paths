@@ -60,7 +60,7 @@ For added flexibility, you can split the databases in combined mode so each comp
 
 Since Clair is a set of micro-services, its processes do not share database tables even when combined into the same OS process.
 
-![combo_mode_clair_pics #center](https://user-images.githubusercontent.com/87687089/213428835-6e54ee7e-885c-4114-9123-348e162924b2.PNG)
+![clair #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/4a484dd2-dd78-42f5-a8b9-c6abb0ede6cb)
 
 ### Distributed Deployment
 
