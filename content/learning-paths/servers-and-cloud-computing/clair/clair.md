@@ -70,6 +70,6 @@ In a distributed deployment, each Clair component runs in its own OS process. Ty
 
 A load balancer must be setup for this deployment model. The load balancer routes traffic to the correct components and routes traffic between the Clair nodes.
 
-![test6 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/ae287443-07e0-4fa9-a5fa-5514c6e77033)
+![clair2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/1edd1e57-2704-4554-9308-3c8c6d2675b7)
 
 To learn more refer to the [Clair documentation](https://quay.github.io/clair/whatis.html#what-is-clair).
