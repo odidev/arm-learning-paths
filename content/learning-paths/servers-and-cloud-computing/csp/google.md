@@ -35,29 +35,29 @@ Select `Compute Engine` from the `Quick access` section, if shown. Else navigate
 
 Click the `CREATE INSTANCE` button.
 
-![ggl1 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/da6df026-22f2-426f-b4a4-ee30e1be60ad "Create a VM instance")
+![google1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/4db59b89-2d9b-453a-8f9c-52780f4f134e "Create a VM instance")
 
 ### Name your instance
 
 Give your instance a meaningful, but arbitrary, name. This is particularly useful when creating multiple instances. You can optionally add [labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels) as additional identifiers.
 
-![ggl2 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/5c397fd5-5068-4023-985e-0043ce228df8 "Specify a name for the instance and optionally add labels")
+![google2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/e81f1cb9-8d62-471a-be56-6d6a1da64e46 "Specify a name for the instance and optionally add labels")
 
 ### Select Region and Zone for your instance.
 
 Select an appropriate `region` and `zone` that support Arm-based servers.
 
-![ggl3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/03325569-9ce3-41fd-b9ef-62eb6f4d5ba3 "Select an appropriate region and zone")
+![google3 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/f2a19cd0-7565-44d3-9e6f-b27bccad3e86 "Select an appropriate region and zone")
 
 To view the latest information on which available regions and zones support Arm-based servers, see the [Compute Engine documentation](https://cloud.google.com/compute/docs/regions-zones#available). To filter for Arm-based machines, click on `Select a machine type`, then select `T2A` from the pull-down menu.
 
-![ggl4 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/16b27729-d7a0-4549-95ee-326c345b58c0 "Check which regions and zones support Arm-based machines")
+![google4 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/5b1683dc-724f-4c60-aea6-dc945c7bf6bc "Check which regions and zones support Arm-based machines")
 
 ### Machine configuration
 
 Select `T2A` from the `Series` pull-down menu. Then select an appropriate `Machine type` configuration for your needs.
 
-![ggl5 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/4d6393de-a6d5-496c-9392-5063c1d82736 "Select an appropriate T2A machine type")
+![google5 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/6bd82b54-c254-483e-a017-d09e129e98b5 "Select an appropriate T2A machine type")
 
 ### Boot disk configuration
 
@@ -77,7 +77,7 @@ Other options, such as `Confidential VM service`, can optionally be enabled. For
 
 When satisfied, click `CREATE`. After a few moments the instance will be available and listed in your [console](https://console.cloud.google.com/compute/instances).
 
-![ggl8 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/712734f4-e495-4d1b-ab42-712f6c1abb04 "Create the VM instance")
+![google8 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/0a9bee8f-cd4c-478c-b8d1-85db99d8ef3a "Create the VM instance")
 
 ## Connect to your instance
 
