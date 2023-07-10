@@ -34,16 +34,16 @@ Install the AWS CLI on your machine using the [install guide](/install-guides/aw
 
 Go to My Security Credentials
 
-![access #center](https://github.com/odidev/arm-learning-paths/assets/40816837/b3220e64-c343-4fba-90e5-9f8799f78eef)
+![aws1 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/e1ab1ea2-86a0-404e-be52-629f9f1a9695)
 
 On Your Security Credentials page click on `Create access key`
 
-![test3 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/2a07ed91-29aa-4f7a-ba17-194817b1d960 "Access keys")
+![aws2 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/a5d9dcd7-640d-44ee-9bc8-791c10796b13 "Access keys")
 
 
 Copy the `Access key ID` and `Secret access key`
 
-![test4 #center](https://github.com/odidev/arm-learning-paths/assets/40816837/163f2df2-7e27-4ea8-ad98-ede5050f2ebe "Copy keys")
+![aws3 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/40816837/699c3643-f979-4548-81f9-4300828b6a06 "Copy keys")
 
 
 ## Configure the AWS CLI
