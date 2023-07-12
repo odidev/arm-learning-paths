@@ -52,7 +52,7 @@ Select `All Elastic Container Registry actions (ecr:*)` under `Actions allowed`.
 
 Under `Resources`, select `specific` and `Add ARN`. Here you can select the `region` and select `Any` for Repository name under `This account` and click on `Add ARNs`.
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/17dc8e33-deec-49e5-a38f-21e204b8c2eb)
+![ecs6 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/e2feb854-4bdc-4f38-bf75-d1defbf6e75e)
 
 Skip the tags by clicking `Next`. 
 
@@ -107,11 +107,11 @@ Log in to the AWS console with the `test_user` credentials you created earlier.
 
 AWS will ask for your `account id`, `username`, and `password`.
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/15119efa-95ec-4dcc-b886-f9152f0f7bc8)
+![ecs13 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/360c57f3-ec3d-425b-8339-f9050d3cb0bd)
 
 Change your password when prompted. 
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/f741024d-1dd2-4a4a-88ed-e340eff26726)
+![ecs14 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/b5be4ac8-daf5-471d-aab5-782151647ace)
 
 Once you log in, search for Elastic Container Registry.
 
@@ -119,7 +119,7 @@ Once you log in, search for Elastic Container Registry.
 
 From there fill in the name of the repository as `myapp` and leave the defaults for everything else.
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/727d18c4-fe52-4211-abc0-7a0f0d9ea123)
+![ecs16 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/eaca4082-371b-4d11-b390-1d0a89423d31)
 
 Select `Create Repository` in the lower right of the page and your repository will be created. 
 
@@ -223,7 +223,7 @@ You can copy this from the ECR dashboard if you haven’t already. Leave everyth
 
 Click `Next`
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/9f057197-22c6-41b3-86f3-813f2a5a9aaf)
+![ecs22 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/649e1811-d322-428e-901c-8b73636e018e)
 
 {{% notice Note %}} No additional port mapping is needed because Nginx runs on port 80 by default.{{% /notice %}} 
 
@@ -234,7 +234,7 @@ Click `Next` in the lower right corner of the dialog.
 ![image #center](https://user-images.githubusercontent.com/87687468/235848013-599bfcbe-27a1-4a47-a7ab-2914081b9b2d.png)
 
 
-![image #center](https://github.com/akhandpuresoftware/arm-learning-paths/assets/87687468/507793d5-08be-46cf-b31f-e626d0bc3505)
+![ecs23 #center](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/assets/71631645/3d54fea6-2a2d-4f99-90f5-bd44e8096e21)
 
 Review everything and click on `create` 
 
