@@ -505,7 +505,7 @@ Outputs:
 app_url = "load-balancer-dev-xxxxxxxxxx.us-east-x.elb.amazonaws.com"
 ```
 
-You can also access the URL from your `load-balancer-dev`` as the DNS name. 
+You can also access the URL from your `load-balancer-dev` as the DNS name. 
 
 Copy the URL to your browser. 
 
