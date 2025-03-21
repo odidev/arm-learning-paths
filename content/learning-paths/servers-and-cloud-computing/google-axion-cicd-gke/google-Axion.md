@@ -17,6 +17,21 @@ In this Learning Path, you will build a .NET 6-based web application using a sel
 ## How do I create a Virtual Machine in GCP?
 Creating a virtual machine based on Google Axion is no different from creating any other VM in GCP. To create a Google Axion virtual machine, launch the GCP portal and navigate to Virtual Machines. 
 Please refer to "Create an Arm-based VM instance with Google Axion CPU" in  [*Create an Axion instance*](/learning-paths/servers-and-cloud-computing/java-on-axion/1-create-instance) for creating Axion based VM instance.
+Install [Docker](/install-guides/docker/) and [Kubernets](/install-guides/kubectl/) in the created VM. 
+Also run below command to configure and authenticate  gcloud:
+```console
+gcloud config set project <project-id>
+gcloud auth activate-service-account --key-file=<path-to-key-file>.json
+gcloud auth configure-docker
+```
+Now, run below command to create a Kubernetes secret with the key:
+```console
+kubectl create secret docker-registry gcr-json-key \
+  --docker-server=gcr.io \
+  --docker-username=_json_key \
+  --docker-password="$(cat <path-to-key>.json)" \
+  --docker-email=<your-email>
+```
 
 ## How do I configure the GitHub repository?
 
