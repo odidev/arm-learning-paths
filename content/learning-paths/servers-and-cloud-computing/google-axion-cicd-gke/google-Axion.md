@@ -39,7 +39,7 @@ Follow these steps:
 
 * Once the GitHub repository is forked, navigate to the `Settings` tab, and click on `Actions` in the left navigation pane. 
 
- * In `Runners`, select `New self-hosted runner`, which opens up a new page to configure the runner. 
+* In `Runners`, select `New self-hosted runner`, which opens up a new page to configure the runner. 
 
 * For `Runner image`, select `Linux`, and for `Architecture`, select `ARM64`. 
 
@@ -86,12 +86,11 @@ Creating a Container Registry in Google Cloud Platform (GCP) is a straightforwar
 3. Authenticate gcloud with the Service Account
 	- Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to the JSON key file:
 	```console
-		export GOOGLE_APPLICATION_CREDENTIALS="PATH_TO_JSON_KEY_FILE"
+	export GOOGLE_APPLICATION_CREDENTIALS="PATH_TO_JSON_KEY_FILE"
 	```
 	- Use the following command to authenticate gcloud with the service account:
 	```console
 	gcloud auth activate-service-account SERVICE_ACCOUNT_EMAIL --key-file=PATH_TO_JSON_KEY_FILE
-	
 	```
 	Replace:
     SERVICE_ACCOUNT_EMAIL with the email address of the service account (e.g., my-service-account@my-project.iam.gserviceaccount.com).
