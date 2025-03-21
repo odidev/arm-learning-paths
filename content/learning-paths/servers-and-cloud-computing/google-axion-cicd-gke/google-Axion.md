@@ -16,18 +16,7 @@ In this Learning Path, you will build a .NET 6-based web application using a sel
 
 ## How do I create a Virtual Machine in GCP?
 Creating a virtual machine based on Google Axion is no different from creating any other VM in GCP. To create a Google Axion virtual machine, launch the GCP portal and navigate to Virtual Machines. 
-
-Select `Create Instance`, and fill in the details such as `Name`, and `Region`. 
-
-In the `Machine Type` field, click on `C4A` series and select the `c4s-standard-2`(or based or your requirment) family of VMs.
-
-![google-axion-vm #center](_images/machine_type.png)
-![google-axion-vm #center](_images/machine_type2.png)
-
-
-{{% notice Note %}}
-To learn more about Arm-based VMs in GCP, refer to "Create an Arm-based VM instance with Google Axion CPU" in  [*Create an Axion instance*](/learning-paths/servers-and-cloud-computing/java-on-axion/1-create-instance).
-{{% /notice %}}
+Please refer to "Create an Arm-based VM instance with Google Axion CPU" in  [*Create an Axion instance*](/learning-paths/servers-and-cloud-computing/java-on-axion/1-create-instance) for creating Axion based VM instance.
 
 ## How do I configure the GitHub repository?
 
@@ -68,9 +57,9 @@ Once you have successfully created the cluster, you can proceed to the next sect
 Creating a Container Registry in Google Cloud Platform (GCP) is a straightforward process. Google Container Registry (GCR) is a private registry for storing and managing Docker container images. Here's a step-by-step guide to creating and using a container registry in GCP:
 1. Enable Required APIs
 	- Enable the Container Registry API:
-		- Navigate to the API & Services section in the Cloud Console.
-		- Click on "Enable APIs and Services"
-		- Search for "Container Registry API" and enable it.
+		- Navigate to the **API & Services** section in the Cloud Console.
+		- Click on "**Enable APIs and Services**"
+		- Search for "**Google Container Registry API**" and enable it.
 
 	- Enable the Google Cloud Storage API (if not already enabled):
 		- Container Registry uses Google Cloud Storage to store container images, so this API must be enabled.
@@ -83,8 +72,8 @@ Creating a Container Registry in Google Cloud Platform (GCP) is a straightforwar
 	Download the Key File:
 		- A JSON key file will be downloaded to your computer. This file contains the credentials for the service account.
 
-3. Authenticate gcloud with the Service Account
-	- Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to the JSON key file:
+3. Authenticate gcloud with the Service Account in self-hosted runner VM
+	- upload json file in self-hosted runner VM and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to the JSON key file:
 	```console
 	export GOOGLE_APPLICATION_CREDENTIALS="PATH_TO_JSON_KEY_FILE"
 	```
@@ -135,13 +124,11 @@ The contents of the file are shown below:
 
 ```console
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
 </Project>
 ```
 
@@ -298,7 +285,10 @@ The next step is to trigger the pipeline manually by navigating to `Actions` tab
 ![google-axion-vm #center](_images/workflow.png)
 
 You can check your kubernetes cluster and see new application pods deployed on the cluster as shown below:
+![google-axion-vm #center](_images/nodes_and_pods.png)
 
+You can also check the running application in browser with http://load_balancer_IP:8080 as shown below:
+![google-axion-vm #center](_images/website.png)
 
 
 
