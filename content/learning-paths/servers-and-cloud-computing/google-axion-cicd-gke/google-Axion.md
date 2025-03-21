@@ -296,7 +296,7 @@ It has the following main steps:
 
 The next step is to trigger the pipeline manually by navigating to `Actions` tab in the GitHub repository. Select `Deploy .NET app`, and click on `Run Workflow`. You can also execute the pipeline by making a commit to the repository. Once the pipeline executes successfully, you will see the Actions output in a format similar to what is shown below:
 
-+==========================================
+![google-axion-vm #center](_images/workflow.png)
 
 You can check your kubernetes cluster and see new application pods deployed on the cluster as shown below:
 
