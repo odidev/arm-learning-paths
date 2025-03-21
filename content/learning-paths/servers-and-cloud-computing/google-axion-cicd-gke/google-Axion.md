@@ -15,17 +15,18 @@ In this Learning Path, you will build a .NET 6-based web application using a sel
 {{% /notice %}}
 
 ## How do I create a Virtual Machine in GCP?
-Creating a virtual machine based on Google Axion is no different from creating any other VM in Azure. To create a Google Axion virtual machine, launch the GCP portal and navigate to Virtual Machines. 
+Creating a virtual machine based on Google Axion is no different from creating any other VM in GCP. To create a Google Axion virtual machine, launch the GCP portal and navigate to Virtual Machines. 
 
 Select `Create Instance`, and fill in the details such as `Name`, and `Region`. 
 
 In the `Machine Type` field, click on `C4A` series and select the `c4s-standard-2`(or based or your requirment) family of VMs.
-===============================================
-![azure-cobalt-vm #center](_images/azure-cobalt-vm.png)
-===============================================
+
+![google-axion-vm #center](_images/machine_type.png)
+![google-axion-vm #center](_images/machine_type2.png)
+
 
 {{% notice Note %}}
-To learn more about Arm-based VMs in GCP, refer to "Create an Arm-based VM instance with Google Axion CPU" in  [*Create an Axion instance*](/learning-paths/servers-and-cloud-computing/java-on-axion/1-create-instance/).
+To learn more about Arm-based VMs in GCP, refer to "Create an Arm-based VM instance with Google Axion CPU" in  [*Create an Axion instance*](/learning-paths/servers-and-cloud-computing/java-on-axion/1-create-instance).
 {{% /notice %}}
 
 ## How do I configure the GitHub repository?
@@ -62,7 +63,7 @@ Make sure to update the `main.tf` file with the correct VM as shown below:
 ```
 Once you have successfully created the cluster, you can proceed to the next section.
 
-## How do I create a container registry with Azure Container Registry (ACR)?
+## How do I create a container registry with Artifact Registry?
 
 Creating a Container Registry in Google Cloud Platform (GCP) is a straightforward process. Google Container Registry (GCR) is a private registry for storing and managing Docker container images. Here's a step-by-step guide to creating and using a container registry in GCP:
 1. Enable Required APIs
@@ -287,7 +288,7 @@ It has the following main steps:
 
 1. `Checkout repo` - checks out the repository code.
 2. `Build image` - builds a Docker image of the application.
-3. `Tag and push image` - tags and pushes the Docker image to Azure Container Registry.
+3. `Tag and push image` - tags and pushes the Docker image to Artifact Registry.
 4. `Get GKE credentials` - retrieves Google Kubernetes Cluster credentials.
 7. `Deploy application` - deploys the application to GKE using specified Kubernetes manifests.
 
