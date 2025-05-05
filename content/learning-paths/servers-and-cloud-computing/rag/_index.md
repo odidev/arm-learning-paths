@@ -23,6 +23,7 @@ author: Nobel Chowdary Mandepudi
 
 ### Tags
 skilllevels: Advanced
+cloud_service_providers: Google Cloud
 armips:
     - Neoverse
 subjects: ML
@@ -32,6 +33,7 @@ tools_software_languages:
     - Python
     - Streamlit
     - Google Axion
+    - Demo
 
 further_reading:
     - resource:

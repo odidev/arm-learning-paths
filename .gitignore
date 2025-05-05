@@ -15,3 +15,11 @@ nohup.out
 
 venv/
 z_local_saved/
+/.idea/
+/tools/.python-version
+/.python-version
+*.iml
+*.xml
+
+# CTags symbol index
+tags
