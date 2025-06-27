@@ -1,6 +1,6 @@
 ---
 title: Build the MNN Command-line ViT Demo
-weight: 5
+weight: 4
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
@@ -23,7 +23,14 @@ adb push example.png /data/local/tmp/
 
 ## Build Binaries for Command-line Inference
 
-Navigate to the MNN project that you cloned in the previous section. 
+Run the following commands to clone the MNN repository and checkout the source tree:
+
+```bash
+cd $HOME
+git clone https://github.com/alibaba/MNN.git
+cd MNN
+git checkout 282cebeb785118865b9c903decc4b5cd98d5025e
+```
 
 Create a build directory and run the build script. 
 
@@ -70,7 +77,7 @@ echo "<img>./example.png</img>Describe the content of the image." > prompt
 Finally, run an inference on the model with the following command:
 
 ```bash
-./llm_demo models/Qwen-VL-2B-convert-4bit-per_channel/config.json prompt
+./llm_demo models/Qwen2.5-VL-3B-Instruct-MNN/config.json prompt
 ```
 
 If the launch is successful, you should see the following output, with the performance benchmark at the end:
@@ -120,7 +127,7 @@ With the new ADB shell, run the following commands:
 cd /data/local/tmp/
 chmod +x llm_demo
 export LD_LIBRARY_PATH=$PWD
-./llm_demo models/Qwen-VL-2B-convert-4bit-per_channel/config.json prompt
+./llm_demo models/Qwen2.5-VL-3B-Instruct-MNN/config.json prompt
 ```
 ## Benchmark Results
 
