@@ -1,12 +1,12 @@
 ---
-title: Validate Kafka on Azure Cobalt 100 Arm64 VMs
+title: Validate Kafka on Azure Cobalt 100 Arm64 virtual machine
 weight: 5
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## Baseline Functional Test (ZooKeeper + Kafka + Console Producer/Consumer) on Azure Cobalt 100 
+## Run a functional test of Kafka on Azure Cobalt 100 
 
 After installing Kafka on your Arm64 virtual machine, you can perform simple baseline testing to validate that Kafka runs correctly and produces the expected output.
 
@@ -91,4 +91,4 @@ hello from azure arm vm
 ```
 Kafka baseline test is successful — ZooKeeper and the broker are running, the producer sends messages, and the consumer receives them. 
 
-Now you can proceed to benchmarking Kafka’s performance on the Azure Cobalt 100 Arm VM.
+Now you can proceed to benchmarking Kafka’s performance on the Azure Cobalt 100 Arm virtual machine.

@@ -27,8 +27,6 @@ armips:
 
 tools_software_languages:
     - Kafka
-    - Zookeeper
-    - Java
     - kafka-producer-perf-test.sh
     - kafka-consumer-perf-test.sh
 

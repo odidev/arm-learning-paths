@@ -7,7 +7,8 @@ layout: learningpathall
 ---
 
 ## Install Kafka on Azure Cobalt 100
-This guide walks you through installing Apache **Kafka 3.7.1** on an **Azure Cobalt 100 Arm-based VM** or inside a **Docker container running Azure Linux 3.0**. You’ll download Kafka, extract it into `/opt`, configure permissions, and verify the installation by checking the installed version.
+
+This guide walks you through installing Apache Kafka 3.7.1 on an Azure Ubuntu Arm-based virtual machine. You’ll download Kafka, extract it into `/opt`, configure permissions, and verify the installation by checking the installed version.
 
 Follow the below instructions to install Kafka on Ubuntu virtual machine.
 
